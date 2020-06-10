@@ -8,7 +8,6 @@
   <meta name="format-detection" content="telephone=no">
 
   <link rel="stylesheet" type="text/css" media="all" href="css/style.min.css">
-
   <link rel="preload" href="fonts/rubik-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/rubik-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -67,13 +66,13 @@
     <form class="form form--express" action="">
       <h2 class="heading heading--fieldset">Экспресс-автокредит</h2>
       <label class="form__wrap" for="name">
-        <input id="name" class="form__field form__field--input" name="name" placeholder="ФИО" required>
+        <input id="name" class="form__field" name="name" placeholder="ФИО" required>
       </label>
       <label class="form__wrap" for="date">
-        <input id="date" class="form__field form__field--input" name="make" placeholder="Дата рождения" required>
+        <input id="date" class="form__field" name="make" placeholder="Дата рождения" required>
       </label>
       <label class="form__wrap" for="phone">
-        <input id="phone" type="tel" class="form__field form__field--input" name="tel" placeholder="Телефон" required>
+        <input id="phone" type="tel" class="form__field" name="tel" placeholder="Телефон" required>
       </label>
       <div class="form__select-wrap">
         <select name="gear" id="" class="form__field select">
@@ -100,8 +99,10 @@
       <img src="img/popup/popup-1.jpg" alt="">
     </div>
     <div class="popup__text text">
-      <p class="text__p">Ходовая часть автомобиля проверяется нашими мастерами максимально внимательно и профессионально. Проверка подвески машины предусматривает осмотр всех технических узлов, которые проверяются различными способами с помощью специального подъемника.</p>
-      <p class="text__p">При диагностике ходовой б/у-автомобилей мы проверяем ступичные колесные подшипники, состояние рычагов и сайлентблоков, все шаровые опоры, суппорты, колодки шланги, стойки стабилизации, рессоры, торсионные подвески и многое другое.</p>
+      <p class="text__p">Ходовая часть автомобиля проверяется нашими мастерами максимально внимательно и профессионально. Проверка подвески машины предусматривает осмотр всех технических узлов, которые проверяются различными способами с помощью
+        специального подъемника.</p>
+      <p class="text__p">При диагностике ходовой б/у-автомобилей мы проверяем ступичные колесные подшипники, состояние рычагов и сайлентблоков, все шаровые опоры, суппорты, колодки шланги, стойки стабилизации, рессоры, торсионные подвески и многое
+        другое.</p>
     </div>
   </div>
 
@@ -236,8 +237,8 @@
               </h1>
             </div>
             <div class="car__slider slider-car__wrap">
-              <div class="slider-car slider-car--vertical slider-beautify">
-                <a href="img/catalog/catalog-car-1@2x.jpg" class="slider-car__item">
+              <div class="slider-car slider-car--pc slider-beautify slider-beautify--pc slider-beautify--mobile">
+                <a href="img/catalog/catalog-car-1@2x.jpg" class="slider-car__item slider-car__item--main">
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
@@ -304,8 +305,112 @@
                   </picture>
                 </a>
               </div>
+              <div class="slider-nav-car slider-beautify">
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-5@1x.webp 1x, img/catalog/catalog-car-5@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-5@1x.jpg 1x, img/catalog/catalog-car-5@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-5@1x.webp 1x, img/catalog/catalog-car-5@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-5@1x.jpg 1x, img/catalog/catalog-car-5@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-5@1x.jpg" srcset="img/catalog/catalog-car-5@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-6@1x.webp 1x, img/catalog/catalog-car-6@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-6@1x.jpg 1x, img/catalog/catalog-car-6@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-6@1x.webp 1x, img/catalog/catalog-car-6@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-6@1x.jpg 1x, img/catalog/catalog-car-6@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-6@1x.jpg" srcset="img/catalog/catalog-car-6@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+              </div>
             </div>
             <div class="car__info-wrapper">
+              <div class="benefits car__benefits">
+                <ul class="benefits__list">
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-guarantee"></use>
+                      </svg>
+                      <div class="benefits__text">Техническая гарантия</div>
+                    </a>
+                  </li>
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-docs"></use>
+                      </svg>
+                      <div class="benefits__text">По 2-м документам</div>
+                    </a>
+                  </li>
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-percent"></use>
+                      </svg>
+                      <div class="benefits__text">Превый взнос от 0%</div>
+                    </a>
+                  </li>
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-credit"></use>
+                      </svg>
+                      <div class="benefits__text">Автокредит от 6%</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <div class="car__features">
                 <div class="car__features-group">
                   <h3 class="car__features-heading">Характеристики</h3>
@@ -414,9 +519,9 @@
 
               <ul class="car__info-tabs">
                 <li class="car__info-tab car__info-tab--active">Характеристики</li>
-                <li class="car__info-tab"><span class="car__info-text">Комплектация</span></li>
-                <li class="car__info-tab"><span class="car__info-text">Проверка VIN</span></li>
-                <li class="car__info-tab"><span class="car__info-text">Преимущества</span></li>
+                <li class="car__info-tab">Комплектация</li>
+                <li class="car__info-tab">Проверка VIN</li>
+                <li class="car__info-tab">Преимущества</li>
               </ul>
 
               <div class="car__info-block car__info-block--active car__info-block--techs">
@@ -611,42 +716,37 @@
                 </div>
                 <a class="car__buy-button button button--red">Рассчитать кредит от 6.5%</a>
               </div>
-              <div class="benefits benefits--aside car__benefits">
-                <ul class="benefits__list">
-                  <li class="benefits__item">
-                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
-                      <svg class="benefits__icon" viewBox="0 0 48 48">
-                        <use xlink:href="#icon-guarantee"></use>
-                      </svg>
-                      <div class="benefits__text">Техническая гарантия</div>
-                    </a>
-                  </li>
-                  <li class="benefits__item">
-                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
-                      <svg class="benefits__icon" viewBox="0 0 48 48">
-                        <use xlink:href="#icon-docs"></use>
-                      </svg>
-                      <div class="benefits__text">По 2-м документам</div>
-                    </a>
-                  </li>
-                  <li class="benefits__item">
-                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
-                      <svg class="benefits__icon" viewBox="0 0 48 48">
-                        <use xlink:href="#icon-percent"></use>
-                      </svg>
-                      <div class="benefits__text">Превый взнос от 0%</div>
-                    </a>
-                  </li>
-                  <li class="benefits__item">
-                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
-                      <svg class="benefits__icon" viewBox="0 0 48 48">
-                        <use xlink:href="#icon-credit"></use>
-                      </svg>
-                      <div class="benefits__text">Автокредит от 6%</div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <form class="form form--step car__express-form" action="">
+                <fieldset class="form__step">
+                  <h2 class="heading heading--fieldset">Экспресс-автокредит</h2>
+                  <label class="form__wrap" for="name">
+                    <input id="name" class="form__field" name="name" placeholder="ФИО" required>
+                  </label>
+                  <label class="form__wrap" for="date">
+                    <input id="date" class="form__field" name="make" placeholder="Дата рождения" required>
+                  </label>
+                  <label class="form__wrap" for="phone">
+                    <input id="phone" type="tel" class="form__field" name="tel" placeholder="Телефон" required>
+                  </label>
+                  <div class="form__select-wrap">
+                    <select name="gear" id="" class="form__field select">
+                      <option value="">Прописка</option>
+                      <option value="">2</option>
+                    </select>
+                  </div>
+                  <div class="form__submit-wrap">
+                    <label for="agree-passport" class="form__agree form__label">
+                      <input class="visually-hidden form__checkbox" id="agree-passport" type="checkbox" name="agree-passport">
+                      <span class="form__agree-text">Являюсь гражданином РФ (кроме Северного Кавказа)</span>
+                    </label>
+                    <label for="agree-personal" class="form__agree form__label">
+                      <input class="visually-hidden form__checkbox" id="agree-personal" type="checkbox" name="agree-personal">
+                      <span class="form__agree-text">Соглашаюсь на обработку моих персональных данных</span>
+                    </label>
+                    <button type="submit" class="button button--red form__submit">Отправить заявку</button>
+                  </div>
+                </fieldset>
+              </form>
             </div>
           </section>
         </section>
