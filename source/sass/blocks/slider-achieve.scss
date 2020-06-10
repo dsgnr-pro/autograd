@@ -1,0 +1,28 @@
+.slider-achieve .slick-dots {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.slider-achieve .slick-dots li {
+  background-color: $black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.slider-achieve .slick-slide {
+  padding: 0 8px;
+}
+
+.slider-achieve .slick-dots li.slick-active {
+  background-color: $red;
+}
+
+.slider-achieve .slick-dots li button {
+  display: none;
+}
+

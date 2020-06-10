@@ -1,0 +1,10 @@
+.link {
+  @include a-reset;
+  position: relative;
+  transition: all 0.3s;
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

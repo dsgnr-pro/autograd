@@ -1,0 +1,212 @@
+.configurator__tab {
+  border-radius: 12px;
+  background-color: white;
+  color: $grey;
+  border: 1px solid $grey;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.configurator__tab--active {
+  background-color: $red;
+  color: white;
+}
+
+.configurator__tab span {
+  display: none;
+}
+
+.configurator__step {
+
+}
+
+.configurator__step--active {
+  display: block;
+  width: 100%;
+}
+
+.configurator__tabs {
+  @include list-reset;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.configurator__steps {
+  @include list-reset;
+  width: 100%;
+}
+
+.configurator {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.configurator__title {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.configurator__color {
+  width: 240px;
+}
+
+.configurator__car {
+}
+
+.configurator__car img {
+  width: 100%;
+}
+//Checkboxes of Configurator
+
+.configurator__checkbox {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+}
+
+.configurator__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.configurator__checkbox-label {
+  position: relative;
+  margin-right: 16px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.configurator__checkbox:hover input ~ .configurator__checkbox-label {
+  background-color: #ccc;
+}
+
+.configurator__checkbox input:checked ~ .configurator__checkbox-label {
+  background-color: $red;
+}
+
+.configurator__checkbox-label:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.configurator__checkbox input:checked ~ .configurator__checkbox-label:after {
+  display: block;
+}
+
+.configurator__checkbox .configurator__checkbox-label:after {
+  left: 7px;
+  top: 4px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+//Radio Buttons of Configurator
+
+.configurator__next {
+  padding: 8px 16px;
+  border: 2px solid $grey;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.configurator__radio-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.configurator__radio-list {
+  @include list-reset;
+}
+
+.configurator__radio {
+  position: relative;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.configurator__radio-label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid grey;
+  border-radius: 100%;
+  -webkit-tap-highlight-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: $red;
+    transform: scale(0);
+    transition: all 0.2s ease;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .configurator__radio-label::after {
+      transform: scale(3.6);
+    }
+  }
+}
+
+input[type="radio"]:checked + .configurator__radio-label {
+  border-color: $red;
+
+  &::after {
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(.35,.9,.4,.9);
+    opacity: 1;
+  }
+}
+
+.configurator__buy-btn {
+  margin-bottom: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .configurator__color {
+    width: 440px;
+  }
+  .configurator__form {
+    justify-content: space-between;
+  }
+  .configurator__tab {
+    width: 48px;
+    height: 48px;
+  }
+}

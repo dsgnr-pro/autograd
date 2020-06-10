@@ -1,0 +1,869 @@
+.car__slider-block {
+  position: relative;
+}
+
+.car__buttons {
+  padding: 16px;
+  border-top: 1px solid $light-grey;
+}
+
+.car__block {
+  margin-bottom: 16px;
+}
+
+.car__option {
+  position: relative;
+}
+
+.car__option-checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.car__option input:checked ~ svg {
+  transition: all 0.2s;
+  fill: $red;
+}
+
+.car__stock {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: $green;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+}
+
+.car__info-block {
+  padding: 16px;
+}
+
+.car__price-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  display: flex;
+}
+
+.car__benefits {
+  margin-bottom: 16px;
+}
+
+.car__p {
+  line-height: 1.5;
+}
+
+.car__buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.car__ul {
+  @include list-reset;
+}
+
+.car__ul span {
+  font-weight: 600;
+}
+
+.car__ul li {
+  padding-left: 16px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+  margin-bottom: 8px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: $red;
+    margin-right: 8px;
+    margin-top: 4px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+}
+
+.car__protect {
+  position: absolute;
+  z-index: 100;
+  top: 16px;
+  right: 24px;
+}
+
+.car__protect-icon {
+  width: 32px;
+  height: 25px;
+}
+
+.car__buy-button {
+  border-radius: 0;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  // &::after {
+  //   display: block;
+  //   content: "";
+  //   width: 32px;
+  //   height: 32px;
+  //   background-image: url("../img/icon-percentage.svg");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   margin-left: 16px;
+  //   filter: invert(1);
+  // }
+  &:active {
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.4);
+    transform: translateY(2px);
+  }
+}
+
+.car__price {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  line-height: 1;
+  color: $red;
+}
+
+.car__old-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.car__info-tabs {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.car__info-tab {
+  box-sizing: border-box;
+  padding: 16px;
+  text-align: center;
+  background: white;
+  // border-radius: 4px;
+  border-bottom: 2px solid transparent;
+  color: $blue;
+  border-radius: 4px;
+  border: 1px solid $light-grey;
+  margin-bottom: 8px;
+  // display: flex;
+  // align-items: center;
+
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   margin-top: -2px;
+  //   width: 10px;
+  //   height: 10px;
+  //   border-radius: 50%;
+  //   margin-right: 8px;
+  //   background-color: RGB(254,0,0);
+  //   opacity: 0;
+  //   flex-shrink: 0;
+  // }
+  //
+  // &:hover {
+  //   // border: 1px solid $blue;
+  //   // transition: 0.3s;
+  //   // cursor: pointer;
+  // }
+}
+
+.car__info-text {
+  position: relative;
+  z-index: 25;
+}
+
+.car__info-tab--active {
+  font-weight: 600;
+  background-color: $light-grey;
+
+  &::before {
+    opacity: 1;
+  }
+
+  // &:hover {
+  //   // background: $blue;
+  //   cursor: default;
+  // }
+}
+
+.car__info-block--techs {
+  padding: 0;
+}
+
+.car__info-block--benefits {
+  padding: 0;
+}
+
+.car__info-block--vin .car__detail-text {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/checked.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 16px;
+  }
+}
+
+.car__detail-table {
+  @include list-reset;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.car__detail-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-grey;
+  padding: 16px;
+}
+
+.car__info-block {
+  display: none;
+}
+
+.car__info-block--active {
+  display: block;
+  overflow-x: hidden;
+}
+
+.car__presents {
+  @include list-reset;
+  display: flex;
+}
+
+.car__presents-item {
+  width: 25%;
+}
+
+.car__logo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.car__credit-price {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.car__call-block {
+  border: 1px solid $grey;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.car__slider-wrap {
+  position: relative;
+}
+
+.car__configure {
+  @include a-reset;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  right: 16px;
+  background-image: url("../img/configure.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+  z-index: 100;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.car__360 {
+  @include a-reset;
+  position: absolute;
+  height: 40px;
+  width: 48px;
+  top: 0;
+  left: 16px;
+  background-image: url("../img/icon-360.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+  z-index: 100;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.car__complect-form {
+  margin: 8px 0;
+}
+
+.car__complect-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.car__complect-form {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.car__complect-popup {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.car__photos img {
+  width: 100%;
+}
+//Dots//
+
+.car__photos .slick-dots {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 0;
+}
+
+.car__photos .slick-dots li {
+  background-color: $black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.car__photos .slick-dots li.slick-active {
+  background-color: $red;
+}
+
+.car__photos .slick-dots li button {
+  display: none;
+}
+//Arrows//
+
+.car__photos .slick-arrow {
+  position: absolute;
+  top: calc(50% - 48px);
+  width: 48px;
+  height: 48px;
+  background-color: $grey;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  z-index: 100;
+  border: none;
+  opacity: 0.2;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+
+.car__photos .slick-next {
+  right: 15px;
+}
+
+.car__photos .slick-prev {
+  left: 15px;
+  transform: rotate(180deg);
+}
+//graceful-loading//
+
+.car__photos {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.car__photos.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+.car__photos .car__photos__item {
+  display: none;
+}
+
+.car__photos .car__photos__item:first-child {
+  display: block;
+  visibility: hidden;
+}
+
+.car__photos.slick-initialized .car__photos__item {
+  display: block;
+  visibility: visible!important;
+}
+//graceful-loading//
+
+.car__details-block {
+  @include white-block;
+  overflow: hidden;
+}
+
+.car__phone {
+  @include a-reset;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.car__info-top {
+  padding: 16px;
+}
+
+.car__tradein-button {
+  border: 1px solid $blue;
+  border-radius: 2px;
+  margin-right: 16px;
+  padding: 12px;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.car__info-tab {
+  width: 48%;
+}
+
+.car__buy-block {
+  @include white-block;
+  // overflow: hidden;
+  border-radius: $border-radius;
+  margin-bottom: 16px;
+}
+
+.car__option {
+  background-color: $light-grey;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.car__option svg {
+  fill: $dark-grey;
+}
+
+.car__option--tradein {
+  padding: 14px;
+}
+
+.car__option--compare {
+  padding: 16px;
+}
+
+.car__features-list {
+  @include list-reset;
+}
+
+.car__features-item {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.car__features {
+  background-color: white;
+  box-shadow: $shadow;
+  padding: 16px;
+  border-radius: $border-radius;
+}
+
+.car__features-group {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.car__features-group--vin .car__features-item {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/checked.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.car__features-group--vin .car__features-item--heading {
+  &:before {
+    display: none;
+  }
+  font-weight: 600;
+}
+@media (max-width: $iphone-five-width-only) {
+  .car__stock {
+    font-size: 12px;
+  }
+
+  .car__phone {
+    font-size: 14px;
+  }
+
+  .car__price {
+    font-size: 14px;
+  }
+
+  .car__old-price {
+    font-size: 14px;
+  }
+
+  .car__price-credit {
+    font-size: 12px;
+  }
+
+  .car__info-tab {
+    font-size: 12px;
+  }
+}
+@media (max-width: $mobile-width-only) {
+
+  .car__features {
+    display: none;
+  }
+
+  .car__buy-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    z-index: 100;
+  }
+
+  .car__slider {
+    margin: 0 -16px;
+  }
+
+  .car__express-form {
+    display: none;
+  }
+}
+@media (max-width: $tablet-width-only) {
+  .car__top-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-heading {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .car__detail-block {
+    flex-direction: column-reverse;
+    display: flex;
+    overflow: visible;
+  }
+
+  .car__option--print {
+    display: none;
+  }
+}
+@media (min-width: $tablet-width) {
+  .car__credit-block {
+    position: sticky;
+    top: 96px;
+    // overflow: hidden;
+  }
+
+  .car__slider-block {
+    flex-direction: row-reverse;
+  }
+
+  .car__buttons form {
+    width: 49%;
+    display: block;
+  }
+
+  .car__buy-button {
+    margin-bottom: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .car__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .car__details-block {
+    margin-bottom: 16px;
+  }
+
+  .car__info-tab {
+    font-size: 14px;
+  }
+
+  .car__price-wrap {
+    margin-bottom: 0;
+  }
+
+  .car__credit-price {
+    width: auto;
+    margin-left: 32px;
+    margin-top: 0;
+  }
+
+  .car__complect-form .form__wrap {
+    flex-grow: 1;
+  }
+
+  .car__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .car__price-wrap {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .car__info-tab {
+    padding: 12px 0;
+  }
+
+  .car__phone {
+    font-size: 16px;
+  }
+
+  .car__form-express {
+    flex-direction: column;
+  }
+
+  .car__info-block {
+    height: 340px;
+    overflow-y: scroll;
+    padding: 16px 24px;
+
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: $grey;
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: $light-grey;
+    }
+  }
+
+  .car__info-block--benefits,
+  .car__info-block--techs {
+    padding: 0;
+  }
+
+  .car__tradein-button {
+    height: 58px;
+  }
+
+  .car__features {
+    padding: 24px;
+  }
+
+  .car__features-list {
+    column-count: 2;
+  }
+
+  .car__features-list--main {
+    column-count: 1;
+  }
+
+  .car__features-heading {
+    margin-top: 0;
+    width: 180px;
+    display: block;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: $desktop-width) {
+  .car__option {
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  .car__option .car__option-checkbox {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .car__info-top {
+    flex-direction: row-reverse;
+  }
+
+  .car__features-group {
+    display: flex;
+  }
+
+  .car__price-wrap {}
+
+  .car__top-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    display: flex;
+  }
+
+  .car__buy-button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .car__info-top {
+    padding: 0;
+  }
+
+  .car__logo {
+    padding: 16px;
+    border-bottom: 1px solid $light-grey;
+    margin-bottom: 0;
+  }
+
+  .car__price-wrap {
+    padding: 16px;
+  }
+
+  .car__tradein-button {
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+
+  .car__call-to {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .car__price {
+    font-size: 18px;
+    flex-grow: 0;
+  }
+
+  .car__old-price {
+    font-size: 18px;
+  }
+
+  .car__presents {
+    height: 100%;
+  }
+
+  .car__present-img {
+    height: 30px;
+  }
+
+  .car__buy-button {
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  .car__presents-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid $grey;
+    margin-right: 8px;
+    transition: 0.3s;
+
+    &:hover {
+      border-color: $red;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .car__presents-item--active {
+    border: 1px solid $red;
+  }
+
+  .car__present-img {
+    margin-bottom: 16px;
+  }
+
+  .car__info-tabs {
+    padding: 12px;
+    padding-bottom: 0;
+  }
+
+  .car__info-tab {
+    padding: 12px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  .car__present-text {
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .car__benefits {
+    margin-bottom: 16px;
+  }
+}

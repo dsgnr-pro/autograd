@@ -1,0 +1,149 @@
+@media print {
+  .page-banner {
+    display: none;
+  }
+
+  .slider-car .slick-arrow {
+    display: none!important;
+  }
+
+  .slider-car {
+    margin-bottom: 32px;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .car__presentation {
+    width: 100%!important;
+    max-width: 100%!important;
+  }
+
+  .slider-car img {
+    object-fit: contain;
+    display: none;
+  }
+
+  .slider-car__item--main {
+    width: 1050px!important;
+  }
+
+  .slider-car__item--main img {
+    display: block;
+    width: 100%;
+  }
+
+  .slider-nav-car {
+    display: none;
+  }
+
+  .page-main__section--latest {
+    display: none;
+  }
+
+  .car__info-wrapper {
+    display: none;
+  }
+
+  .car__block {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .car__detail-block {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .car__price {
+    font-size: 20px;
+  }
+
+  .car__old-price {
+    font-size: 20px;
+  }
+
+  .car__logo {
+    margin-bottom: 32px;
+    display: none;
+  }
+
+  .car__stock {
+    &::before {
+      display: none;
+    }
+  }
+
+  .car__details-block {
+    width: 48%;
+    margin: 0;
+  }
+
+  .car__credit-block {
+    width: 48%;
+    margin: 0;
+  }
+
+  .car__buy-button {
+    display: none;
+  }
+
+  .page-footer__links {
+    display: none;
+  }
+
+  .page-footer__contacts {
+    position: absolute;
+    right: 24px;
+    bottom: 140px;
+  }
+
+  .page-footer__top {
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-footer__contacts-wrap {
+    display: flex;
+    background-color: $grey;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+
+  .page-footer__time {
+    text-align: right;
+  }
+
+  .car__buttons {
+    display: none;
+  }
+
+  .car__info-tabs {
+    display: none;
+  }
+
+  .main-nav__links {
+    display: none;
+  }
+
+  .page-footer__disclaimer {
+    display: none;
+  }
+
+  .page-footer__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    padding: none;
+  }
+
+  .page-footer__carro {
+    margin: 0;
+  }
+
+  .page-footer__legend {
+    margin: 0;
+  }
+}

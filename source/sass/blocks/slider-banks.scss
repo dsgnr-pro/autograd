@@ -1,0 +1,130 @@
+.slider-banks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 26px 50px -27px rgba(0,0,0,.22);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  @include white-block;
+  padding: 16px;
+}
+
+.slider-banks__item img {
+  max-height: 40px;
+  max-width: 170px;
+  object-fit: contain;
+  margin: auto;
+  filter: grayscale(1);
+}
+
+.slider-banks .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider-banks .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.slider-banks .slick-arrow {
+  position: absolute;
+  bottom: calc(-70px);
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/arrow-black.svg);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 53%;
+  z-index: 100;
+  opacity: 1;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: none;
+  border-radius: 6px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    top: 10px;
+    left: 40%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 0;
+    transform: rotate(-45deg);
+    top: 14px;
+    left: 40%;
+  }
+}
+
+.slider-banks .slick-prev {
+  position: absolute;
+  top: 22%;
+  left: 16px;
+  transform: rotate(180deg);
+}
+
+.slider-banks .slick-next {
+  position: absolute;
+  top: 22%;
+  right: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider-banks {
+    padding: 24px 76px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  // .slider-banks .slick-prev {
+  //   left: -25px;
+  // }
+  //
+  // .slider-banks .slick-next {
+  //   right: -25px;
+  // }
+  // .slider-banks {
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  // }
+  // .slider-banks__item {
+  //   width: 15%;
+  //   flex-shrink: 0;
+  //   padding: 0 16px;
+  //   margin-bottom: 32px;
+  // }
+  .slider-banks__item img {
+    transition: all 0.3s;
+    width: 100%;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}

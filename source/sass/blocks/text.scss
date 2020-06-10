@@ -1,0 +1,21 @@
+.text__block {
+  @include white-block;
+  padding: 16px;
+}
+
+.text__p {
+  line-height: 1.5;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: $tablet-width) {
+  .text__block {
+    padding: 24px;
+  }
+}

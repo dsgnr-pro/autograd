@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Автоград: Автомобиль</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" type="text/css" media="all" href="css/style.min.css">
+  <link rel="preload" href="fonts/rubik-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/rubik-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <script src="js/picturefill.min.js"></script>
+</head>
+
+<body>
+
+  <div id="express" class="white-popup white-popup--form mfp-with-anim mfp-hide">
+    <div class="catalog catalog--express">
+      <h2 class="heading heading--fieldset">Выбранный автомобиль</h2>
+      <div class="catalog__mini-item catalog__mini-item--express">
+        <div class="catalog__mini-img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+            <img class=" lazyloaded" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте" src="img/catalog/catalog-car-1@1x.jpg">
+          </picture>
+        </div>
+        <div class="catalog__car-mini-info">
+          <div class="catalog__car-descr">
+            <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+            <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+              <div class="catalog__car-price">1 565 000 ₽</div>
+              <div class="catalog__car-oldprice">1 585 000 ₽</div>
+            </div>
+          </div>
+          <ul class="catalog__car-info">
+            <li class="catalog__car-info-item">
+              54 000 км
+            </li>
+            <li class="catalog__car-info-item catalog__car-info-item--add">
+              120 л.с.
+            </li>
+            <li class="catalog__car-info-item">
+              АКПП
+            </li>
+            <li class="catalog__car-info-item">
+              Дизель
+            </li>
+            <li class="catalog__car-info-item catalog__car-info-item--add">
+              3 владельца
+            </li>
+            <li class="catalog__car-info-item catalog__car-info-item--add">
+              Передний привод
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <form class="form form--express" action="">
+      <h2 class="heading heading--fieldset">Экспресс-автокредит</h2>
+      <label class="form__wrap" for="name">
+        <input id="name" class="form__field" name="name" placeholder="ФИО" required="">
+      </label>
+      <label class="form__wrap" for="date">
+        <input id="date" class="form__field" name="make" placeholder="Дата рождения" required="">
+      </label>
+      <label class="form__wrap" for="phone">
+        <input id="phone" type="tel" class="form__field" name="tel" placeholder="Телефон" required="">
+      </label>
+      <div class="form__select-wrap">
+        <select name="gear" id="" class="form__field select">
+          <option value="">Прописка</option>
+          <option value="">2</option>
+        </select>
+      </div>
+      <div class="form__submit-wrap">
+        <label for="agree-passport" class="form__agree form__label">
+          <input class="visually-hidden form__checkbox" id="agree-passport" type="checkbox" name="agree-passport">
+          <span class="form__agree-text">Являюсь гражданином РФ (кроме Северного Кавказа)</span>
+        </label>
+        <label for="agree-personal" class="form__agree form__label">
+          <input class="visually-hidden form__checkbox" id="agree-personal" type="checkbox" name="agree-personal">
+          <span class="form__agree-text">Соглашаюсь на обработку моих персональных данных</span>
+        </label>
+        <button type="submit" class="button button--red form__submit">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="benefit-tech" class="popup popup--media white-popup white-popup--form mfp-with-anim mfp-hide">
+    <div class="popup__img">
+      <img src="img/popup/popup-1.jpg" alt="">
+    </div>
+    <div class="popup__text text">
+      <p class="text__p">Ходовая часть автомобиля проверяется нашими мастерами максимально внимательно и профессионально. Проверка подвески машины предусматривает осмотр всех технических узлов, которые проверяются различными способами с помощью
+        специального подъемника.</p>
+      <p class="text__p">При диагностике ходовой б/у-автомобилей мы проверяем ступичные колесные подшипники, состояние рычагов и сайлентблоков, все шаровые опоры, суппорты, колодки шланги, стойки стабилизации, рессоры, торсионные подвески и многое
+        другое.</p>
+    </div>
+  </div>
+
+  <div style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-cards"><g fill-rule="evenodd"><rect width="18" height="18" rx="2"></rect><rect y="30" width="18" height="18" rx="2"></rect><rect x="30" width="18" height="18" rx="2"></rect><rect x="30" y="30" width="18" height="18" rx="2"></rect></g></symbol><symbol id="icon-compare"><path d="M13.714 9.143H11.43v2.286H9.143v2.285h2.286V16h2.285v-2.286H16V11.43h-2.286V9.143zm-6.36 4.571H0V16h7.354v-2.286zm0-4.571H0v2.286h7.354V9.143zM16 4.57H0v2.286h16V4.571zM16 0H0v2.286h16V0z"></path></symbol><symbol id="icon-credit"><path d="M39.706 5.588l-3.989 3.99c-6.639-5.294-16.197-5.294-22.835 0l-3.99-3.99c8.855-7.45 21.96-7.45 30.814 0zm2.919 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.294-6.638 5.294-16.196 0-22.835l3.99-3.989zm-2.919 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.989-3.989c6.638 5.293 16.196 5.293 22.835 0l3.99 3.99zM5.974 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zM14.386 20v-1a2 2 0 012-2h16a2 2 0 012 2v1h-20zm2 9h6v-2h-6v2zm-2-7v7a2 2 0 002 2h16a2 2 0 002-2v-7h-20z"></path></symbol><symbol id="icon-docs"><path d="M39.763 5.588l-3.989 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.99-3.99c8.855-7.45 21.96-7.45 30.814 0zm2.919 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.294-6.638 5.294-16.196 0-22.835l3.99-3.989zm-2.919 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.989-3.989c6.639 5.293 16.197 5.293 22.835 0l3.99 3.99zM6.031 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zm13.985-23.3h11.968v13.963a1.995 1.995 0 001.995-1.995V16.027a2 2 0 00-2-2H22.01a1.995 1.995 0 00-1.995 1.994z"></path><path d="M16.027 20.016v11.957a2 2 0 002 2h9.962a2 2 0 002-2V20.016a2 2 0 00-2-2h-9.962a2 2 0 00-2 2zm10.968 7.973h-7.979v-1.994h7.979v1.994zm0-3.989h-7.979v-1.995h7.979V24z"></path></symbol><symbol id="icon-exchange" viewbox="0 0 423.755 423.755"><path d="M43.841 281.457c-18.585-44.869-18.586-94.29 0-139.159 15.615-37.697 42.78-68.384 77.674-88.255v75.005h30V15.053H37.519v30h43.755c-73 57.164-102.324 158.139-65.15 247.885 14.167 34.202 37.07 64.159 66.234 86.634 28.274 21.789 61.873 36.201 97.162 41.677l4.601-29.646c-63.343-9.829-115.783-51.005-140.28-110.146zm363.676 11.481c21.651-52.272 21.651-109.848 0-162.12-14.167-34.202-37.07-64.159-66.234-86.633-28.275-21.79-61.874-36.202-97.163-41.678l-4.6 29.646c63.342 9.829 115.782 51.005 140.279 110.146 18.585 44.869 18.585 94.29 0 139.159-15.614 37.697-42.78 68.384-77.673 88.255v-75.005h-30v113.995h113.995v-30h-43.625c28.453-22.217 50.831-51.508 65.021-85.765z"></path></symbol><symbol id="icon-filter" viewbox="0 0 56 56"><path d="M41.08 48H2a1 1 0 100 2h39.08c.488 3.387 3.401 6 6.92 6 3.859 0 7-3.14 7-7s-3.141-7-7-7c-3.519 0-6.432 2.613-6.92 6zM20.695 27H2a1 1 0 100 2h18.632c.396 3.602 3.456 6.414 7.161 6.414s6.765-2.812 7.161-6.414H54a1 1 0 100-2H34.891c-.577-3.4-3.536-6-7.098-6s-6.521 2.6-7.098 6zM8 0C4.141 0 1 3.14 1 7s3.141 7 7 7c3.519 0 6.432-2.613 6.92-6H54a1 1 0 100-2H14.92C14.432 2.613 11.519 0 8 0z"></path></symbol><symbol id="icon-fuel"><g fill-rule="evenodd"><path d="M35.331 38.25l3.99 3.99c-8.855 7.45-21.96 7.45-30.814 0l3.99-3.99c6.638 5.293 16.196 5.293 22.834 0zM42.24 8.507c7.45 8.854 7.45 21.96 0 30.814l-3.989-3.99c5.293-6.638 5.293-16.196 0-22.835l3.99-3.989zm-36.65 0l3.989 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99c-7.45-8.855-7.45-21.96 0-30.814zm33.73-2.919l-3.99 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.989-3.99c8.854-7.45 21.96-7.45 30.814 0z" fill-rule="nonzero"></path><path d="M28.826 16.172l3.191 3.191v7.834c0 1.566-.488 2.413-2.15 2.413h-2.639v1.82H18.9V13.716h8.33v14.359h2.639c.7 0 .613-.102.613-.878v-7.198l-2.74-2.741 1.085-1.086zM17.853 32.14h10.422v1.97H17.853v-1.97zm2.428-16.639h5.566v4.307h-5.566v-4.307z"></path></g></symbol><symbol id="icon-guarantee"><path d="M39.32 5.588l-3.989 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.989-3.99c8.854-7.45 21.96-7.45 30.814 0zm2.92 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.293-6.638 5.293-16.196 0-22.835l3.99-3.989zm-2.92 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.99-3.989c6.638 5.293 16.196 5.293 22.834 0l3.99 3.99zM5.589 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zm19.123-25.986c.578.398 2.674 1.663 5.24.506.362-.18.796-.18 1.193-.036.362.145.687.434.832.832.506 1.192 1.626 4.445 1.156 8.24-.397 3.361-2.277 8.132-8.71 11.602l-.434.289-.506-.18c-.144-.037-3.253-1.338-5.783-4.41-2.313-2.892-4.554-7.88-1.951-15.397.144-.397.433-.723.83-.903a1.457 1.457 0 011.08-.06l.15.06c.759.325 2.783.975 5.24-.579.506-.325 1.193-.325 1.663.036zm-.362 5.313c-.144-.433-.722-.433-.975 0l-.76 2.386c-.072.18-.252.325-.433.325h-2.494c-.434 0-.614.578-.253.831l2.024 1.482c.18.109.253.325.18.506l-.758 2.386c-.145.433.325.759.687.506l2.024-1.482c.18-.109.397-.109.542 0l2.024 1.482c.325.253.83-.073.686-.506l-.759-2.386a.531.531 0 01.181-.506l2.024-1.482c.361-.253.18-.83-.253-.83h-2.494c-.18 0-.361-.145-.434-.326z"></path></symbol><symbol id="icon-like--active"><path d="M8 14.786L6.88 13.66C2.72 9.964 0 7.473 0 4.42 0 1.929 1.92 0 4.4 0 5.76 0 7.12.643 8 1.688 8.88.643 10.24 0 11.6 0 14.08 0 16 1.929 16 4.42c0 3.053-2.72 5.544-6.88 9.24L8 14.787z" fill="#FF3D3D"></path></symbol><symbol id="icon-like"><path d="M8 14.786L6.88 13.66C2.72 9.964 0 7.473 0 4.42 0 1.929 1.92 0 4.4 0 5.76 0 7.12.643 8 1.688 8.88.643 10.24 0 11.6 0 14.08 0 16 1.929 16 4.42c0 3.053-2.72 5.544-6.88 9.24L8 14.787v-.001z"></path></symbol><symbol id="icon-mileage"><path d="M39.706 5.588l-3.989 3.99c-6.639-5.294-16.197-5.294-22.835 0l-3.99-3.99c8.855-7.45 21.96-7.45 30.814 0zm2.919 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.294-6.638 5.294-16.196 0-22.835l3.99-3.989zm-2.919 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.989-3.989c6.638 5.293 16.196 5.293 22.835 0l3.99 3.99zM5.974 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zm19.468-15.946c-.355-.669-4.014-4.943-4.137-4.878-.124.066 1.359 5.494 1.714 6.163a1.371 1.371 0 002.423-1.285z"></path><path d="M24.386 13.787c-5.64 0-10.213 4.572-10.213 10.213 0 5.64 4.572 10.213 10.213 10.213 5.64 0 10.212-4.573 10.212-10.213 0-5.64-4.572-10.213-10.212-10.213zm0 2.594a7.619 7.619 0 017.47 9.12h-4.314c-.359 1.035-1.634 1.802-3.156 1.802-1.523 0-2.798-.767-3.157-1.802h-4.314a7.619 7.619 0 017.47-9.12z"></path></symbol><symbol id="icon-owners"><g transform="translate(.886)"><path d="M39.32 5.588l-3.989 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.989-3.99c8.854-7.45 21.96-7.45 30.814 0zm2.92 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.293-6.638 5.293-16.196 0-22.835l3.99-3.989zm-2.92 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.99-3.989c6.638 5.293 16.196 5.293 22.834 0l3.99 3.99zM5.589 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99z"></path><circle cx="23.894" cy="17.426" r="3.532"></circle><path d="M32.191 31.894a1.365 1.365 0 01-1.85-.447l-2.554-4.234v5.617a1.28 1.28 0 01-1.276 1.276h-5.234A1.28 1.28 0 0120 32.83v-5.617l-2.532 4.213a1.346 1.346 0 01-1.851.468 1.352 1.352 0 01-.468-1.851l4.383-7.256a1.34 1.34 0 011.149-.66h6.425c.468 0 .915.256 1.15.66l4.382 7.256a1.35 1.35 0 01-.447 1.85z"></path></g></symbol><symbol id="icon-percent"><path d="M39.82 5.588l-3.989 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.989-3.99c8.854-7.45 21.96-7.45 30.814 0zm2.92 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.293-6.638 5.293-16.196 0-22.835l3.99-3.989zm-2.92 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.99-3.989c6.638 5.293 16.196 5.293 22.834 0l3.99 3.99zM6.089 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zm17.738-21.153a4.754 4.754 0 10-9.509 0 4.754 4.754 0 009.509 0zm-6.226 0a1.472 1.472 0 112.944 0 1.472 1.472 0 01-2.944 0zm13.338.579l-1.358-1.358a.777.777 0 00-1.1 0L17.89 27.982a.777.777 0 000 1.099l1.358 1.358a.777.777 0 001.1 0L30.94 19.845a.777.777 0 000-1.098zm-1.184 6.158a4.754 4.754 0 100 9.509 4.754 4.754 0 000-9.509zm0 6.226a1.472 1.472 0 110-2.943 1.472 1.472 0 010 2.943z"></path></symbol><symbol id="icon-phone"><path d="M37.62 30.668l8.817 4.899a2.897 2.897 0 011.321 3.551c-2.528 6.907-9.932 10.552-16.899 8.01C16.594 41.92 6.02 31.346.812 17.08-1.73 10.114 1.915 2.71 8.822.18a2.9 2.9 0 013.553 1.322c1.63 2.939 3.264 5.879 4.897 8.817a3.592 3.592 0 01-.462 4.192l-4.116 4.63c2.929 7.132 8.972 13.175 16.104 16.104l4.63-4.116a3.592 3.592 0 014.192-.462z" fill-rule="evenodd"></path></symbol><symbol id="icon-power"><path d="M39.82 5.588l-3.989 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.989-3.99c8.854-7.45 21.96-7.45 30.814 0zm2.92 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.293-6.638 5.293-16.196 0-22.835l3.99-3.989zm-2.92 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.99-3.989c6.638 5.293 16.196 5.293 22.834 0l3.99 3.99zM6.089 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zm23.563-17.647h-3.516l1.036-8.406c.072-.554-.675-.819-.964-.337l-7.466 12.452c-.217.337.048.77.433.77h3.517l-1.036 8.406c-.072.554.674.82.963.338 2.072-3.445 6.094-10.188 7.467-12.452.217-.338-.048-.771-.434-.771z"></path></symbol><symbol id="icon-print"><path d="M12.8 2.489H3.2V.477C3.2.213 3.413 0 3.677 0h8.646a.477.477 0 01.477.477v2.012zM16 5.135v5.73a1.935 1.935 0 01-1.935 1.935h-.554V8.711H2.49V12.8h-.554A1.935 1.935 0 010 10.865v-5.73C0 4.066.866 3.2 1.935 3.2h12.13C15.134 3.2 16 4.066 16 5.135zm-1.778.732a.889.889 0 10-1.778 0 .889.889 0 001.778 0zM3.677 16a.477.477 0 01-.477-.477v-6.1h9.6v6.1a.477.477 0 01-.477.477H3.677zm.59-5.067c0 .246.199.445.444.445h6.578a.444.444 0 000-.89H4.71a.444.444 0 00-.444.445zm0 1.778c0 .246.199.445.444.445h6.578a.444.444 0 000-.89H4.71a.444.444 0 00-.444.445zm0 1.778c0 .245.199.444.444.444h6.578a.444.444 0 000-.889H4.71a.444.444 0 00-.444.445z"></path></symbol><symbol id="icon-remove" viewbox="0 0 512 512"><path d="M256 512C114.836 512 0 397.164 0 256S114.836 0 256 0s256 114.836 256 256-114.836 256-256 256zm0-480C132.48 32 32 132.48 32 256s100.48 224 224 224 224-100.48 224-224S379.52 32 256 32zm0 0"></path><path d="M176.813 351.188c-4.098 0-8.196-1.555-11.31-4.692-6.25-6.25-6.25-16.383 0-22.633l158.4-158.402c6.253-6.25 16.386-6.25 22.636 0s6.25 16.383 0 22.637L188.137 346.496a16.016 16.016 0 01-11.325 4.692zm0 0"></path><path d="M335.188 351.188c-4.094 0-8.192-1.555-11.305-4.692L165.484 188.117c-6.254-6.25-6.254-16.383 0-22.633 6.25-6.254 16.383-6.254 22.633 0l158.399 158.399c6.254 6.25 6.254 16.383 0 22.633a16.007 16.007 0 01-11.329 4.672zm0 0"></path></symbol><symbol id="icon-rows"><g fill-rule="evenodd"><rect width="48" height="18" rx="2"></rect><rect y="30" width="48" height="18" rx="2"></rect></g></symbol><symbol id="icon-star"><path d="M24 0C10.766 0 0 10.766 0 24s10.766 24 24 24 24-10.766 24-24S37.234 0 24 0zm15.614 19.79l-8.474 6.59 2.824 10.358a1 1 0 01-1.518 1.094L24 32.202l-8.446 5.63a1 1 0 11-1.52-1.094L16.86 26.38l-8.474-6.59A1 1 0 019 18h10.324l3.748-9.372c.304-.76 1.552-.76 1.858 0L28.676 18H39a1.001 1.001 0 01.614 1.79z"></path></symbol><symbol id="icon-tradein"><path d="M15.17 8.75h-4.108V6.653c0-.624-.264-.792-.63-.373L7.05 10.174c-.366.42-.356 1.105.01 1.524l3.368 3.895c.366.42.634.251.634-.373V13h4.108c.493 0 .83-.446.83-1.07V9.943c0-.624-.337-1.193-.83-1.193zM8.952 4.214L5.577.32c-.366-.42-.639-.25-.639.373V3h-4.1C.344 3 0 3.358 0 3.983V5.97c0 .624.344 1.28.838 1.28h4.1v2.01c0 .624.268.792.633.373l3.384-3.895c.366-.419.362-1.105-.003-1.524z"></path></symbol><symbol id="icon-transmission"><path d="M39.763 5.588l-3.989 3.99c-6.638-5.294-16.196-5.294-22.835 0l-3.99-3.99c8.855-7.45 21.96-7.45 30.814 0zm2.919 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.294-6.638 5.294-16.196 0-22.835l3.99-3.989zm-2.919 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.989-3.989c6.639 5.293 16.197 5.293 22.835 0l3.99 3.99zM6.031 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99zm15.823-15.815a3.008 3.008 0 00-1.113.202l-5.488 2.25c-.96.393-1.073 1.222-.255 1.86l7.098 5.53c.818.637 2.249.833 3.208.44l5.488-2.248c.96-.394 1.073-1.223.255-1.86l-4.163-3.245-.99 2.239 3.575 2.783-3.156 1.295-9.001-7.013 3.154-1.293 1.94 1.51.95-2.152a3.83 3.83 0 00-1.502-.298z"></path><path d="M24.772 21.85l-2.43 5.602c-.19.44.311 1.036 1.126 1.335.814.298 1.624.182 1.815-.258l2.75-6.34a9.45 9.45 0 01-.28.024c-1.138.078-2.157-.061-2.98-.364zm5.13-7.84c-.194 0-.393.007-.594.02-2.832.193-5.462 1.653-6.358 3.417-.237.063-.419.12-.419.12a1.2 1.2 0 00-.679.21 1.409 1.409 0 00-.146.112c-.236.203-.424.49-.536.828v.002a2.245 2.245 0 00-.07.261v.002c-.023.12-.04.244-.044.372v.002a2.496 2.496 0 00.006.288v.005c.053.641.356 1.187.784 1.473.232.174.496.274.769.274.58-.1 1.072-.192 1.55-.437.904.487 2.151.733 3.588.635 3.232-.219 6.199-2.09 6.628-4.18.403-1.957-1.568-3.412-4.479-3.405z"></path></symbol><symbol id="icon-wheels"><g fill-rule="evenodd"><path d="M40.206 5.588l-3.989 3.99c-6.639-5.294-16.197-5.294-22.835 0l-3.99-3.99c8.855-7.45 21.96-7.45 30.814 0zm2.919 2.919c7.45 8.854 7.45 21.96 0 30.814l-3.99-3.99c5.294-6.638 5.294-16.196 0-22.835l3.99-3.989zm-2.919 33.732c-8.854 7.45-21.959 7.45-30.813 0l3.989-3.989c6.638 5.293 16.196 5.293 22.835 0l3.99 3.99zM6.474 39.321c-7.45-8.855-7.45-21.96 0-30.814l3.99 3.99c-5.294 6.638-5.294 16.196 0 22.834l-3.99 3.99z" fill-rule="nonzero"></path><path d="M17.677 13.752h2.403c.331 0 .6.345.6.77v5.392c0 .426-.269.77-.6.77h-2.403c-.332 0-.601-.344-.601-.77v-5.392c0-.425.269-.77.6-.77zm12.015 0h2.403c.331 0 .6.345.6.77v5.392c0 .426-.269.77-.6.77h-2.403c-.332 0-.601-.344-.601-.77v-5.392c0-.425.269-.77.6-.77zM17.677 27.316h2.403c.331 0 .6.344.6.77v5.392c0 .425-.269.77-.6.77h-2.403c-.332 0-.601-.345-.601-.77v-5.392c0-.426.269-.77.6-.77zm12.015 0h2.403c.331 0 .6.344.6.77v5.392c0 .425-.269.77-.6.77h-2.403c-.332 0-.601-.345-.601-.77v-5.392c0-.426.269-.77.6-.77zm-4.206-8.829v11.026a2.11 2.11 0 011.415 1.42h.99a.3.3 0 01.299.304v.597a.3.3 0 01-.3.304h-.989a2.105 2.105 0 01-2.015 1.507 2.105 2.105 0 01-2.016-1.507h-.99a.301.301 0 01-.299-.304v-.597a.3.3 0 01.3-.305h.989a2.11 2.11 0 011.415-1.42V18.488a2.11 2.11 0 01-1.415-1.42h-.99a.301.301 0 01-.299-.304v-.597a.3.3 0 01.3-.304h.989a2.105 2.105 0 012.016-1.507c.952 0 1.757.635 2.015 1.507h.99a.3.3 0 01.299.304v.597a.3.3 0 01-.3.305h-.989a2.11 2.11 0 01-1.415 1.42z"></path></g></symbol></svg>
+  </div>
+
+  <section class="page-banner">
+    <div class="container page-banner__container">
+      <div class="page-banner__wrap">
+        <div class="page-banner__item">
+          <div class="page-banner__element">
+            <img class="page-banner__img" src="img/page-banner/page-banner-1.png" alt="">
+            <div class="page-banner__text">
+              Скидка до 100 000 ₽<br>
+              при покупке в кредит
+            </div>
+          </div>
+        </div>
+        <div class="page-banner__item">
+          <div class="page-banner__element">
+            <img class="page-banner__img" src="img/page-banner/page-banner-2.png" alt="">
+            <div class="page-banner__text">
+              Автокредит <span>от 4.6%</span><br>
+              на любое авто с пробегом
+            </div>
+          </div>
+        </div>
+        <div class="page-banner__item">
+          <div class="page-banner__element">
+            <img class="page-banner__img" src="img/page-banner/page-banner-3.png" alt="">
+            <div class="page-banner__text">
+              ОСАГО или зимняя резина<br>
+              за счет автосалона
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header__inner">
+        <div class="page-header__main">
+          <div class="page-header__wrap">
+            <div class="page-header__logo">
+              <img class="page-header__logo-img page-header__logo-img--dark" src="img/logo-black.svg" alt="" width="64" height="auto">
+              <img class="page-header__logo-img page-header__logo-img--sticky" src="img/logo.svg" alt="" width="64" height="auto">
+            </div>
+            <div class="page-header__contacts">
+              <div class="page-header__contacts-item page-header__contacts-item--address">
+                г. Москва, Варшавское шоссе, 170Г
+              </div>
+              <a class="page-header__contacts-item page-header__contacts-item--phone" href="tel:+7 (800) 511-84-30">
+                <svg class="page-header__contacts-icon" viewBox="0 0 48 48">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+                +7 (800) 511-84-30
+              </a>
+              <a class="page-header__contacts-item page-header__contacts-item--phone page-header__contacts-item--phone-main" href="tel:+7 (800) 511-84-30">
+                <svg class="page-header__contacts-icon" viewBox="0 0 48 48">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+                +7 (800) 511-84-30
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__menu">
+          <nav class="main-nav">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item"><a class="site-list__link" href="">C пробегом</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="">Автокредит</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="">Выкуп</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="">Trade-In</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="">Отзывы</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="">Контакты</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="">Об автоцентре</a></li>
+            </ul>
+            <button class="main-nav__toggle">
+              <span class="visually-hidden">Меню сайта</span>
+            </button>
+            <div class="main-nav__links">
+              <a href="" class="main-nav__link main-nav__link--compare" title="Сравнение">
+                <svg class="main-nav__link-icon" viewBox="0 0 16 16">
+                  <use xlink:href="#icon-compare"></use>
+                </svg>
+                <span class="main-nav__count main-nav__count--compare">12</span>
+              </a>
+              <a href="" class="main-nav__link main-nav__link--favorites" title="Избранное">
+                <svg class="main-nav__link-icon" viewBox="0 0 16 16">
+                  <use xlink:href="#icon-like"></use>
+                </svg>
+                <span class="main-nav__count main-nav__count--favorites">12</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="container">
+      <ul class="crumbs">
+        <li class="crumbs__item">
+          <a class="link" href="">Главная</a>
+        </li>
+        <li class="crumbs__item">
+          <a class="link" href="">Автомобили</a>
+        </li>
+        <li class="crumbs__item">
+          <a class="link" href="">Nissan</a>
+        </li>
+        <li class="crumbs__item">
+          <a class="link" href="">Maxima</a>
+        </li>
+        <li class="crumbs__item">
+          <span>Nissan Maxima SV Premium 2016</span>
+        </li>
+      </ul>
+    </div>
+    <section class="page-main__car car">
+      <div class="container">
+        <section class="car__block row">
+          <div class="car__presentation col-12 col-lg-8">
+            <div class="car__top-wrap">
+              <h1 class="page-main__h1 car-heading heading">
+                Nissan Maxima SV Premium <span class="car__heading-year">2016</span>
+              </h1>
+            </div>
+            <div class="car__slider slider-car__wrap">
+              <div class="slider-car slider-car--pc slider-beautify slider-beautify--pc slider-beautify--mobile">
+                <a href="img/catalog/catalog-car-1@2x.jpg" class="slider-car__item slider-car__item--main">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </a>
+                <a href="img/catalog/catalog-car-2@2x.jpg" class="slider-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </a>
+                <a href="img/catalog/catalog-car-3@2x.jpg" class="slider-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </a>
+                <a href="img/catalog/catalog-car-4@2x.jpg" class="slider-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </a>
+                <a href="img/catalog/catalog-car-5@2x.jpg" class="slider-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-5@1x.webp 1x, img/catalog/catalog-car-5@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-5@1x.jpg 1x, img/catalog/catalog-car-5@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-5@1x.webp 1x, img/catalog/catalog-car-5@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-5@1x.jpg 1x, img/catalog/catalog-car-5@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-5@1x.jpg" srcset="img/catalog/catalog-car-5@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </a>
+                <a href="img/catalog/catalog-car-6@2x.jpg" class="slider-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-6@1x.webp 1x, img/catalog/catalog-car-6@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-6@1x.jpg 1x, img/catalog/catalog-car-6@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-6@1x.webp 1x, img/catalog/catalog-car-6@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-6@1x.jpg 1x, img/catalog/catalog-car-6@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-6@1x.jpg" srcset="img/catalog/catalog-car-6@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </a>
+              </div>
+              <div class="slider-nav-car slider-beautify">
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-5@1x.webp 1x, img/catalog/catalog-car-5@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-5@1x.jpg 1x, img/catalog/catalog-car-5@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-5@1x.webp 1x, img/catalog/catalog-car-5@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-5@1x.jpg 1x, img/catalog/catalog-car-5@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-5@1x.jpg" srcset="img/catalog/catalog-car-5@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+                <div class="slider-nav-car__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-6@1x.webp 1x, img/catalog/catalog-car-6@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-6@1x.jpg 1x, img/catalog/catalog-car-6@2x.jpg 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-6@1x.webp 1x, img/catalog/catalog-car-6@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-6@1x.jpg 1x, img/catalog/catalog-car-6@2x.jpg 2x">
+
+                    <img class="" src="img/catalog/catalog-car-6@1x.jpg" srcset="img/catalog/catalog-car-6@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="car__info-wrapper">
+              <div class="benefits car__benefits">
+                <ul class="benefits__list">
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-guarantee"></use>
+                      </svg>
+                      <div class="benefits__text">Техническая гарантия</div>
+                    </a>
+                  </li>
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-docs"></use>
+                      </svg>
+                      <div class="benefits__text">По 2-м документам</div>
+                    </a>
+                  </li>
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-percent"></use>
+                      </svg>
+                      <div class="benefits__text">Превый взнос от 0%</div>
+                    </a>
+                  </li>
+                  <li class="benefits__item">
+                    <a href="#benefit-tech" data-effect="mfp-move-horizontal" class="benefits__link popup--link">
+                      <svg class="benefits__icon" viewBox="0 0 48 48">
+                        <use xlink:href="#icon-credit"></use>
+                      </svg>
+                      <div class="benefits__text">Автокредит от 6%</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="car__features">
+                <div class="car__features-group">
+                  <h3 class="car__features-heading">Характеристики</h3>
+                  <ul class="car__features-list">
+                    <li class="car__features-item">Антиблокировочная система (ABS)</li>
+                    <li class="car__features-item">Антипробуксовочная система</li>
+                    <li class="car__features-item">Бортовой компьютер</li>
+                    <li class="car__features-item">Датчик дождя</li>
+                    <li class="car__features-item">Датчик света</li>
+                    <li class="car__features-item">Иммобилайзер</li>
+                    <li class="car__features-item">Камера заднего вида</li>
+                    <li class="car__features-item">Количество мест (4)</li>
+                    <li class="car__features-item">Кондиционер (климат 2-зонный)</li>
+                    <li class="car__features-item">Круиз-контроль</li>
+                    <li class="car__features-item">Ксеноновые фары</li>
+                    <li class="car__features-item">Легкосплавные диски, 20</li>
+                    <li class="car__features-item">Люк</li>
+                    <li class="car__features-item">Магнитола (CD)</li>
+                    <li class="car__features-item">Навигационная система</li>
+                    <li class="car__features-item">Обогрев зеркал</li>
+                    <li class="car__features-item">Обогрев сидений</li>
+                    <li class="car__features-item">Омыватель фар</li>
+                    <li class="car__features-item">Парктроник</li>
+                    <li class="car__features-item">Подогрев руля</li>
+                    <li class="car__features-item">Подушки безопасности (фронтальные + боковые)</li>
+                    <li class="car__features-item">Рег-ка сиденья водителя (с памятью)</li>
+                    <li class="car__features-item">Рег-ка сиденья пассажира (электропривод)</li>
+                    <li class="car__features-item">Регулировка руля (электро)</li>
+                    <li class="car__features-item">Салон (кожа)</li>
+                    <li class="car__features-item">Сигнализация</li>
+                    <li class="car__features-item">Система курсовой устойчивости</li>
+                    <li class="car__features-item">Тонированные стекла</li>
+                    <li class="car__features-item">Усилитель рулевого управления</li>
+                    <li class="car__features-item">Цвет салона (темный)</li>
+                    <li class="car__features-item">Центральный замок</li>
+                    <li class="car__features-item">Электропривод зеркал</li>
+                    <li class="car__features-item">Электростеклоподъемники (все)</li>
+                  </ul>
+                </div>
+                <div class="car__features-group car__features-group--vin">
+                  <h3 class="car__features-heading">Проверка VIN</h3>
+                  <ul class="car__features-list">
+                    <li class="car__features-item car__features-item--heading">Проверка по VIN-номеру</li>
+                    <li class="car__features-item">KNAKU815*EA****66</li>
+                    <li class="car__features-item car__features-item--heading">Технические характеристики</li>
+                    <li class="car__features-item">Марка и модель: Kia Sorento</li>
+                    <li class="car__features-item">Год выпуска: 2013</li>
+                    <li class="car__features-item">Объём: 2 л</li>
+                    <li class="car__features-item">Мощность двигателя 150 л.с.</li>
+                    <li class="car__features-item car__features-item--heading">Юридическая чистота</li>
+                    <li class="car__features-item">Сведения о нахождении в залоге: не обнаружены</li>
+                    <li class="car__features-item">Сведения о нахождении в розыске: не обнаружены
+                    </li>
+                    <li class="car__features-item">Ограничения на регистрационные действия: не обнаружены
+                    </li>
+                    <li class="car__features-item">Количество владельцев: 1 владелец
+                    </li>
+                    <li class="car__features-item">Участие в ДТП: Не обнаружено
+                    </li>
+                    <li class="car__features-item">Круиз-контроль</li>
+                    <li class="car__features-item">Ксеноновые фары</li>
+                    <li class="car__features-item">Легкосплавные диски, 20</li>
+                    <li class="car__features-item">Люк</li>
+                    <li class="car__features-item">Магнитола (CD)</li>
+                    <li class="car__features-item">Навигационная система</li>
+                    <li class="car__features-item">Обогрев зеркал</li>
+                    <li class="car__features-item">Обогрев сидений</li>
+                    <li class="car__features-item">Омыватель фар</li>
+                    <li class="car__features-item">Парктроник</li>
+                    <li class="car__features-item">Подогрев руля</li>
+                    <li class="car__features-item">Подушки безопасности (фронтальные + боковые)</li>
+                    <li class="car__features-item">Рег-ка сиденья водителя (с памятью)</li>
+                    <li class="car__features-item">Рег-ка сиденья пассажира (электропривод)</li>
+                    <li class="car__features-item">Регулировка руля (электро)</li>
+                    <li class="car__features-item">Салон (кожа)</li>
+                    <li class="car__features-item">Сигнализация</li>
+                    <li class="car__features-item">Система курсовой устойчивости</li>
+                    <li class="car__features-item">Тонированные стекла</li>
+                    <li class="car__features-item">Усилитель рулевого управления</li>
+                    <li class="car__features-item">Цвет салона (темный)</li>
+                    <li class="car__features-item">Центральный замок</li>
+                    <li class="car__features-item">Электропривод зеркал</li>
+                    <li class="car__features-item">Электростеклоподъемники (все)</li>
+                  </ul>
+                </div>
+                <div class="car__features-group">
+                  <h3 class="car__features-heading">Преимущества</h3>
+                  <ul class="car__features-list">
+                    <li class="car__features-item">
+                      Ставка от 9%</li>
+                    <li class="car__features-item">Сумма кредита до 2 500 000 ₽</li>
+                    <li class="car__features-item">Бортовой компьютер</li>
+                    <li class="car__features-item">Срок кредита от 6 мес. до 7 лет</li>
+                    <li class="car__features-item">Скидка по автокредиту 50 000 ₽</li>
+                    <li class="car__features-item">Оформление 30 минут</li>
+                    <li class="car__features-item">Одобрение банков по паспорту и ВУ</li>
+                    <li class="car__features-item">Досрочное погашение
+                      без штрафов и комиссий</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="car__detail-block col-12 col-lg-4">
+            <section class="car__details-block">
+
+              <ul class="car__info-tabs">
+                <li class="car__info-tab car__info-tab--active">Характеристики</li>
+                <li class="car__info-tab">Комплектация</li>
+                <li class="car__info-tab">Проверка VIN</li>
+                <li class="car__info-tab">Преимущества</li>
+              </ul>
+
+              <div class="car__info-block car__info-block--active car__info-block--techs">
+                <ul class="car__detail-table">
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Год выпуска</div>
+                    <div class="car__detail-text">2016</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Пробег</div>
+                    <div class="car__detail-text">42 000 км</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Тип кузова</div>
+                    <div class="car__detail-text">Седан</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Двигатель</div>
+                    <div class="car__detail-text">Бензиновый</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">КПП</div>
+                    <div class="car__detail-text">АКПП</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Цвет</div>
+                    <div class="car__detail-text">Черный металлик</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Привод</div>
+                    <div class="car__detail-text">Задний</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Объем двигателя</div>
+                    <div class="car__detail-text">2 л.</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Мощность л/c</div>
+                    <div class="car__detail-text">184</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="car__info-block car__info-block--complect">
+                <h3 class="car__info-heading heading">Безопасность</h3>
+                <ul class="car__detail-table">
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Подушки безопасности оконные (шторки)</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Подушка безопасности водителя</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Подушка безопасности пассажира</div>
+                  </li>
+                </ul>
+                <h3 class="car__info-heading heading">Экстерьер</h3>
+                <ul class="car__detail-table">
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Размер колес: Легкосплавные диски 19</div>
+                  </li>
+                  <li class="car__detail-item">
+                    <div class="car__detail-text">Подушка безопасности пассажира</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="car__info-block car__info-block--vin">
+                <div class="car__features-group--vin">
+                  <ul class="car__features-list car__features-list--main">
+                    <li class="car__features-item car__features-item--heading">Проверка по VIN-номеру</li>
+                    <li class="car__features-item">KNAKU815*EA****66</li>
+                    <li class="car__features-item car__features-item--heading">Технические характеристики</li>
+                    <li class="car__features-item">Марка и модель: Kia Sorento</li>
+                    <li class="car__features-item">Год выпуска: 2013</li>
+                    <li class="car__features-item">Объём: 2 л</li>
+                    <li class="car__features-item">Мощность двигателя 150 л.с.</li>
+                    <li class="car__features-item car__features-item--heading">Юридическая чистота</li>
+                    <li class="car__features-item">Сведения о нахождении в залоге: не обнаружены</li>
+                    <li class="car__features-item">Сведения о нахождении в розыске: не обнаружены
+                    </li>
+                    <li class="car__features-item">Ограничения на регистрационные действия: не обнаружены
+                    </li>
+                    <li class="car__features-item">Количество владельцев: 1 владелец
+                    </li>
+                    <li class="car__features-item">Участие в ДТП: Не обнаружено
+                    </li>
+                    <li class="car__features-item">Круиз-контроль</li>
+                    <li class="car__features-item">Ксеноновые фары</li>
+                    <li class="car__features-item">Легкосплавные диски, 20</li>
+                    <li class="car__features-item">Люк</li>
+                    <li class="car__features-item">Магнитола (CD)</li>
+                    <li class="car__features-item">Навигационная система</li>
+                    <li class="car__features-item">Обогрев зеркал</li>
+                    <li class="car__features-item">Обогрев сидений</li>
+                    <li class="car__features-item">Омыватель фар</li>
+                    <li class="car__features-item">Парктроник</li>
+                    <li class="car__features-item">Подогрев руля</li>
+                    <li class="car__features-item">Подушки безопасности (фронтальные + боковые)</li>
+                    <li class="car__features-item">Рег-ка сиденья водителя (с памятью)</li>
+                    <li class="car__features-item">Рег-ка сиденья пассажира (электропривод)</li>
+                    <li class="car__features-item">Регулировка руля (электро)</li>
+                    <li class="car__features-item">Салон (кожа)</li>
+                    <li class="car__features-item">Сигнализация</li>
+                    <li class="car__features-item">Система курсовой устойчивости</li>
+                    <li class="car__features-item">Тонированные стекла</li>
+                    <li class="car__features-item">Усилитель рулевого управления</li>
+                    <li class="car__features-item">Цвет салона (темный)</li>
+                    <li class="car__features-item">Центральный замок</li>
+                    <li class="car__features-item">Электропривод зеркал</li>
+                    <li class="car__features-item">Электростеклоподъемники (все)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="car__info-block car__info-block--benefits">
+                <table class="car__detail-table">
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Ставка</td>
+                    <td class="car__detail-text">От 9%</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Первый взнос</td>
+                    <td class="car__detail-text">От 0%</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Сумма кредита</td>
+                    <td class="car__detail-text">50 000 - 2 500 000 ₽</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Срок кредита</td>
+                    <td class="car__detail-text">От 6 мес. до 7 лет</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Скидка по автокредиту</td>
+                    <td class="car__detail-text">50 000 ₽</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Оформление</td>
+                    <td class="car__detail-text">30 минут</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Одобрение банков</td>
+                    <td class="car__detail-text">По паспорту и ВУ</td>
+                  </tr>
+                  <tr class="car__detail-item">
+                    <td class="car__detail-text">Досрочное погашение</td>
+                    <td class="car__detail-text">Без штрафов</td>
+                  </tr>
+                </table>
+              </div>
+
+            </section>
+            <div class="car__credit-block">
+              <div class="car__buy-block">
+                <div class="car__info-top">
+                  <div class="car__logo">
+                    <div class="car__stock">
+                      В наличии
+                    </div>
+                    <a class="link car__phone car__phone--top" href="tel:8 (800) 511-69-27">+7 (800) 511-69-27</a>
+                    <img src="img/make-logos/kia-logo.svg" width="36px" height="auto" alt="">
+                  </div>
+                  <div class="car__price-wrap">
+                    <div class="car__price">1 525 000 ₽</div>
+                    <div class="car__old-price">1 625 000 ₽</div>
+                    <div class="car__price-credit">от 12 000 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="car__buttons">
+                  <a href="" class="car__option car__option--tradein" data-tippy-content="Обменять по Trade-In">
+                    <svg class="car__option-icon" viewBox="0 0 16 16">
+                      <use xlink:href="#icon-tradein"></use>
+                    </svg>
+                  </a>
+                  <div class="car__option car__option--favorites" data-tippy-content="Добавить в избранное">
+                    <label class="car__option-checkbox" for="favorites-checkbox"></label>
+                    <input id="favorites-checkbox" type="checkbox" name="favorites" class="visually-hidden">
+                    <svg class="car__option-icon" viewBox="0 0 16 16">
+                      <use xlink:href="#icon-like"></use>
+                    </svg>
+                  </div>
+                  <div class="car__option car__option--compare" data-tippy-content="Добавить к сравнению">
+                    <label class="car__option-checkbox" for="compare-checkbox"></label>
+                    <input id="compare-checkbox" type="checkbox" name="compare" class="visually-hidden">
+                    <svg class="car__option-icon" viewBox="0 0 16 16">
+                      <use xlink:href="#icon-compare"></use>
+                    </svg>
+                  </div>
+                  <a href="javascript:if(window.print)window.print()" class="car__option car__option--print" data-tippy-content="Распечатать страницу">
+                    <svg class="car__option-icon" viewBox="0 0 16 16">
+                      <use xlink:href="#icon-print"></use>
+                    </svg>
+                  </a>
+                </div>
+                <a class="car__buy-button button button--red">Рассчитать кредит от 6.5%</a>
+              </div>
+              <form class="form form--step car__express-form" action="">
+                <fieldset class="form__step">
+                  <h2 class="heading heading--fieldset">Экспресс-автокредит</h2>
+                  <label class="form__wrap" for="name">
+                    <input id="name" class="form__field" name="name" placeholder="ФИО" required="">
+                  </label>
+                  <label class="form__wrap" for="date">
+                    <input id="date" class="form__field" name="make" placeholder="Дата рождения" required="">
+                  </label>
+                  <label class="form__wrap" for="phone">
+                    <input id="phone" type="tel" class="form__field" name="tel" placeholder="Телефон" required="">
+                  </label>
+                  <div class="form__select-wrap">
+                    <select name="gear" id="" class="form__field select">
+                      <option value="">Прописка</option>
+                      <option value="">2</option>
+                    </select>
+                  </div>
+                  <div class="form__submit-wrap">
+                    <label for="agree-passport" class="form__agree form__label">
+                      <input class="visually-hidden form__checkbox" id="agree-passport" type="checkbox" name="agree-passport">
+                      <span class="form__agree-text">Являюсь гражданином РФ (кроме Северного Кавказа)</span>
+                    </label>
+                    <label for="agree-personal" class="form__agree form__label">
+                      <input class="visually-hidden form__checkbox" id="agree-personal" type="checkbox" name="agree-personal">
+                      <span class="form__agree-text">Соглашаюсь на обработку моих персональных данных</span>
+                    </label>
+                    <button type="submit" class="button button--red form__submit">Отправить заявку</button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </section>
+        </section>
+    </div></section>
+
+    <section class="page-main__section page-main__section--latest">
+      <div class="container">
+        <h2 class="heading heading--h2">Похожие автомобили</h2>
+        <div class="catalog page-main__catalog page-main__catalog--latest row">
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+          <article class="catalog__car-item col-12 col-md-6 col-lg-3">
+            <a class="catalog__car-link" href="">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+                  <div class="info info--recommend" data-tippy-content="Автомобиль рекомендован нашими специалистами">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="info info--vin" data-tippy-content="VIN-номер прошел полную проверку">
+                    VIN
+                  </div>
+                </div>
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <div class="like__checked"></div>
+                </label>
+              </div>
+              <div class="catalog__car-descr">
+                <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
+                <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
+                  <div class="catalog__car-price">1 565 000 ₽</div>
+                  <div class="catalog__car-oldprice">1 585 000 ₽</div>
+                </div>
+              </div>
+              <div class="catalog__car-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
+
+                  <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                </picture>
+              </div>
+              <ul class="catalog__car-info">
+                <li class="catalog__car-info-item">
+                  54 000 км
+                </li>
+                <li class="catalog__car-info-item">
+                  120 л.с.
+                </li>
+                <li class="catalog__car-info-item">
+                  АКПП
+                </li>
+                <li class="catalog__car-info-item">
+                  Дизель
+                </li>
+              </ul>
+              <div class="catalog__mini-btns">
+                <object data="" type="">
+                  <a href="#express" data-effect="mfp-move-horizontal" class="catalog__mini-credit popup--link">Купить в кредит за <span>4 500 ₽</span> в мес.</a>
+                </object>
+              </div>
+            </a>
+          </article>
+        </div>
+        <a href="" class="button button--plain">Все автомобили</a>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__top">
+        <div class="page-footer__contacts">
+          <!-- <div class="page-footer__logo">
+              <img class="page-footer__logo-img lazyload" src="img/logo-black.svg" alt="" width="64" height="auto">
+            </div> -->
+          <div class="page-footer__contacts-wrap">
+            <div class="page-footer__phone-wrap">
+              <a href="tel:79091522222" class="page-footer__phone">+7 (925) 023-23-42</a>
+              <a href="tel:79091522222" class="page-footer__phone">+7 (925) 023-23-42</a>
+            </div>
+            <div class="page-footer__address-wrap">
+              <div class="page-footer__address">г. Москва, Варшавское ш., д. 170Е</div>
+              <div class="page-footer__time">Ежедневно с 9:00 до 21:00</div>
+
+            </div>
+          </div>
+          <div class="page-footer__address">
+            <div id="map" class="page-footer__map"></div>
+          </div>
+        </div>
+        <div class="page-footer__links">
+          <div class="page-footer__links-group">
+            <h3 class="page-footer__heading">Услуги автоцентра</h3>
+            <ul class="page-footer__list">
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Автокредит</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Выкуп</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Trade-In</a></li>
+            </ul>
+          </div>
+          <div class="page-footer__links-group">
+            <h3 class="page-footer__heading">Популярные марки:</h3>
+            <ul class="page-footer__list">
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Nissan</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">KIA</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Hyundai</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Ford</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Toyota</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Skoda</a></li>
+            </ul>
+          </div>
+          <div class="page-footer__links-group">
+            <h3 class="page-footer__heading">Популярные модели:</h3>
+            <ul class="page-footer__list">
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Solaris</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Focus</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">RAV4</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Sorento</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Qashqai</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Superb</a></li>
+            </ul>
+          </div>
+          <div class="page-footer__links-group">
+            <h3 class="page-footer__heading">Популярные модели:</h3>
+            <ul class="page-footer__list">
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Solaris</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Focus</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">RAV4</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Sorento</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Qashqai</a></li>
+              <li class="page-footer__list-item"><a class="page-footer__link" href="">Superb</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__bottom">
+        <div class="page-footer__legend">Автоцентр «Автоградъ» ®, 1998 - 2020</div>
+        <div class="page-footer__carro">
+          Генеральный партнер <a href="" class="page-footer__carro-link">carro.ru</a>
+        </div>
+        <div class="page-footer__logos">
+          <div class="page-footer__make">
+            Наши партнеры:
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/bmw-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/mercedes-benz-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/cadillac-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/citroen-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/hyundai-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/ford-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/chevrolet-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/honda-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/volkswagen-logo.svg" alt="" class="lazyload">
+          </div>
+          <div class="page-footer__make">
+            <img src="img/make-logos/mazda-logo.svg" alt="" class="lazyload">
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__disclaimer">
+        <p>Годовая ставка автокредита варьируется от 6,4% до 16,5% и зависит от конкретного банка, суммы займа и кредитной программы. Минимальный срок погашения от 61 дня, максимальный - 84 месяца. При этом любые дополнительные комисси автоцентром
+          Genzes не взимаются. </p>
+        <p>В случае невозвращения в условленный срок суммы автокредита или суммы процентов по автокредиту банк-партнер оставляет за собой право начислить штраф за просрочку платежа в среднем размере 0,1% от первоначальной суммы автокредита. При
+          несоблюдении условий погашения автокредита данные о нарушителе могут быть переданы в специальный реестр должников и коллекторское агентство для взыскания задолженности. </p>
+        <p>Кредит предоставляется банком АО «Тинькофф Банк» (Лицензия ЦБ РФ № 2673 от 24.03.2015).</p>
+        <p>
+          Данный Интернет-сaайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ. Для получения подробной информации о наличии и стоимости
+          указанных товаров и (или) услуг, пожалуйста, обращайтесь к менеджерам автосалона.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="http://api-maps.yandex.ru/2.1.69/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/lazysizes.min.js" async=""></script>
+  <script src="js/brazzers-carousel.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/slick-lightbox.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/purecounter.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="https://unpkg.com/popper.js@1"></script>
+  <script src="https://unpkg.com/tippy.js@5"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/ymaps.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/plyr.min.js"></script>
+  <script src="js/slider-lightbox.js"></script>
+  <script>
+    const player = new Plyr('#player');
+  </script>
+
+</body>
+
+</html>

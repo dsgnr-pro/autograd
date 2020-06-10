@@ -1,0 +1,105 @@
+.like {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 50;
+  display: block;
+  padding: 16px;
+}
+
+.like__checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.like__checkbox ~ .like__checked {
+  @include button-reset;
+  width: 18px;
+  height: 18px;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+    padding: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+  }
+
+  &::after {
+    background-image: url("../img/like.svg");
+  }
+
+  &::before {
+    background-image: url("../img/icon-like--active.svg");
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.like__checkbox ~ .like__checked {
+  &::before {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &::after {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.like__checkbox:checked ~ .like__checked {
+  &::after {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.like--info {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: $desktop-width) {
+  .like--info {
+    right: 32px;
+    top: 32px;
+  }
+
+  .like--info .like__checkbox ~ .like__checked {
+    width: 24px;
+    height: 24px;
+  }
+
+  .like {
+    &:hover {
+      cursor: pointer;
+      // transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@media (min-width: $tablet-width) {
+  .services__wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .services__text {
+    width: 70%;
+    margin-right: 24px;
+  }
+}

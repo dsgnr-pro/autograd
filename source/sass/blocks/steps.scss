@@ -1,0 +1,41 @@
+.steps__list {
+  @include list-reset;
+  @include white-block;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.steps__item {
+  counter-increment: MyCounter;
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+
+  &::before {
+    content: counter(MyCounter);
+    display: block;
+    color: $grey;
+    font-size: 59px;
+    color: $red;
+    position: relative;
+    top: -4px;
+    margin-right: 16px;
+    line-height: 1;
+    font-family: "Akrobat";
+    font-weight: 600;
+    height: 49px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .steps__list {
+    padding: 32px 24px;
+  }
+
+  .steps__list {
+
+  }
+
+}

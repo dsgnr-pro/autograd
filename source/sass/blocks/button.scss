@@ -1,0 +1,100 @@
+.button {
+  @include a-reset;
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  color: $black;
+  border-radius: 4px;
+  font-weight: 500;
+  border: none;
+  transition: 0.3s;
+  color: $black;
+  font-weight: 600;
+  font-family: "Akrobat";
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-size: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button--red {
+  color: white;
+  background-color: $red;
+
+  &:hover {
+    background-color: $fade-red;
+  }
+}
+
+.button.btn-more {
+  max-width: 320px;
+  width: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $black;
+  }
+}
+
+.button--express {
+  width: auto;
+  display: block;
+}
+
+.button--plain {
+  color: inherit;
+  background: $grey;
+  padding: 16px;
+}
+
+.button--search {
+  background-color: $red;
+  padding: 14px;
+  color: white;
+}
+
+.button--slider {
+  color: white;
+  background-color: $red;
+  font-weight: 600;
+  max-width: 240px;
+}
+
+.button--next {
+  background-color: $red;
+  margin-bottom: 16px;
+}
+
+.button--submit {}
+@media (max-width: $tablet-width) {
+  .button--slider {
+    display: none;
+  }
+}
+@media (min-width: $tablet-width) {
+  .button--next {
+    display: none;
+  }
+}
+@media (min-width: $desktop-width) {
+
+  .button--slider {
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .button--plane {
+    transition: all 0.3s;
+
+    &:hover {}
+  }
+}

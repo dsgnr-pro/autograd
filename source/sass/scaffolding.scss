@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "akrobat";
+  src: url("../fonts/akrobat-regular.woff2") format("woff2"), url("../fonts/akrobat-regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "akrobat";
+  src: url("../fonts/akrobat-bold.woff2") format("woff2"), url("../fonts/akrobat-bold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham-Pro";
+  src: url("../fonts/gothampro-light.woff2") format("woff2"), url("../fonts/gothampro-light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham-Pro";
+  src: url("../fonts/gothampro-regular.woff2") format("woff2"), url("../fonts/gothampro-regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham-Pro";
+  src: url("../fonts/gothampro-bold.woff2") format("woff2"), url("../fonts/gothampro-bold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Gotham", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: $light-grey;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+fieldset {
+  border: inherit;
+  margin-inline-start: inherit;
+  margin-inline-end: inherit;
+  padding-block-start: inherit;
+  padding-inline-start: inherit;
+  padding-inline-end: inherit;
+  padding-block-end: inherit;
+  min-inline-size: inherit;
+  padding: 0;
+}
+
+.rs-scale {
+  display: flex;
+}
+
+.rs-container .rs-selected {
+  background-color: $blue!important;
+  border: 1px solid $blue!important;
+}
+
+.rs-container .rs-bg {
+  background-color: $light-grey;
+}
+
+.rs-container .rs-bg,
+.rs-container .rs-selected {
+  border-radius: 12px!important;
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+.selected-preview-block {
+  width: 100%!important;
+  margin-bottom: 16px!important;
+}
+
+.selected-preview-block .advert-field-wrapper {
+  overflow: hidden;
+}
+
+.rs-container .rs-pointer {
+  background-color: white!important;
+  @include shadow;
+  border: 1px solid $light-grey;
+}
+@include lazy-keyframes;

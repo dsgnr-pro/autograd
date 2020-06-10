@@ -1,0 +1,43 @@
+.crumbs {
+  display: none;
+}
+@media (min-width: $desktop-width) {
+  .crumbs {
+    @include list-reset;
+    display: flex;
+    margin: 16px 0;
+    align-items: center;
+  }
+
+  .crumbs__item .link {
+    color: rgb(168, 168, 168);
+    transition: all 0.3s;
+
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .crumbs__item {
+    margin-right: 24px;
+    position: relative;
+    border-radius: 20px;
+
+    &:last-child {
+      color: $black;
+    }
+
+    &:not(:last-child)::after {
+      content: "/";
+      width: 8px;
+      height: 8px;
+      display: block;
+      position: absolute;
+      right: -17px;
+      font-size: 16px;
+      top: 0;
+      color: rgb(168, 168, 168);
+    }
+  }
+}

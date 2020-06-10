@@ -1,0 +1,16 @@
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+  visibility: hidden;
+  transition: all 0.4s;
+  will-change: opacity;
+  background-color: $light-grey;
+  -webkit-backface-visibility: hidden;
+}
+
+.lazyloaded {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s;
+  -webkit-backface-visibility: hidden;
+}

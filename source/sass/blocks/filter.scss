@@ -1,0 +1,36 @@
+.filter--index {
+  padding: 16px;
+}
+
+.filter__toggle {
+  &::after{
+    content: "Больше фильтров";
+  }
+}
+
+.filter__toggle--less {
+  &::after{
+    content: "Меньше фильтров";
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .filter__button {
+    margin-bottom: 8px;
+  }
+  .filter__form-item--hidden {
+    display: none;
+  }
+  .filter__form--full .filter__form-item--hidden {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter--index {
+    padding: 32px;
+  }
+  .filter__toggle {
+    display: none;
+  }
+}

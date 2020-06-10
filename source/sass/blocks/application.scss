@@ -1,0 +1,16 @@
+.application__block {
+  margin-bottom: 24px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .application__block--car {
+    display: none;
+  }
+  .application__block--active {
+    display: block;
+  }
+  .application__block .benefits__list {
+    margin-top: 0;
+    padding: 0 16px;
+  }
+}

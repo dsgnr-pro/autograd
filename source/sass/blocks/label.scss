@@ -1,0 +1,49 @@
+
+.label {
+  height: 24px;
+  margin-right: 8px;
+
+  &:hover .label__inner {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(24px);
+  }
+}
+
+.label__inner {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  position: absolute;
+  transition: all 0.3s;
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $black;
+  left: 8px;
+  margin-right: 8px;
+}
+
+.label--recommend {
+  width: 24px;
+}
+
+.label--recommend svg {
+  fill: $green;
+}
+
+.label--vin {
+  background-color: $green;
+  padding: 0 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: white;
+  line-height: 24px;
+}
+
+.label .like {
+  padding: 16px;
+  margin-left: auto;
+}

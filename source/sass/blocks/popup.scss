@@ -1,0 +1,45 @@
+.popup {
+  overflow: hidden;
+}
+
+.popup.popup--media {
+  padding: 0;
+}
+
+.popup--media {
+  padding: 0;
+}
+
+.popup__text {
+  padding: 16px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .popup__img {
+    display: none;
+  }
+}
+@media (min-width: $desktop-width) {
+  .popup__img {
+    flex-shrink: 0;
+    width: 50%;
+  }
+
+  .popup__img img {
+    object-fit: cover;
+    min-height: 100%;
+  }
+
+  .popup.popup--media {
+    max-width: 720px;
+    padding: 0;
+  }
+
+  .popup--media {
+    display: flex;
+  }
+
+  .popup__text {
+    padding: 32px;
+  }
+}

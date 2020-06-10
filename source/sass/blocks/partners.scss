@@ -1,0 +1,29 @@
+.partners__text {
+  padding: 16px 24px;
+  background-color: white;
+  border-radius: 6px;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 0;
+}
+
+.partners__text p {
+  margin: 0;
+}
+
+.partners__tech-img {
+  display: flex;
+  justify-content: center;
+}
+
+.partners__guarantee-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.partners__tech-img img {
+  width: 171px;
+}
+@media (min-width: $tablet-width) {
+  .partners__text {}
+}

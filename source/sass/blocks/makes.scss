@@ -1,0 +1,276 @@
+.makes__list {
+  @include list-reset;
+  font-family: "Akrobat";
+}
+
+.makes--index {
+  border-bottom: 1px solid $grey;
+}
+
+.makes__hidden {
+  @include list-reset;
+  display: none;
+}
+
+.makes__heading-qty {
+  white-space: pre;
+}
+
+.makes__heading {
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-top: -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: $red;
+  }
+}
+
+.makes__item {
+  margin-bottom: 8px;
+}
+
+.makes__item a {
+  @include a-reset;
+  display: flex;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  border-radius: 2px;
+  justify-content: flex-start;
+  position: relative;
+  align-items: center;
+  font-size: 16px;
+
+  &:hover {
+    border-color: $red;
+    transition: 0.3s;
+  }
+}
+
+.makes__item--model a {
+  background-color: white;
+  @include white-block;
+}
+
+.makes__toggle {
+  &::before {
+    content: 'Показать больше';
+  }
+}
+
+.makes__toggle--less {
+  &::before {
+    content: 'Показать меньше';
+  }
+}
+
+.makes__toggle-less {
+  display: none;
+}
+
+.makes__toggle-more {
+  display: none;
+}
+
+.makes__toggle-more--active {
+  display: block;
+}
+
+.makes__toggle-less--active {
+  display: block;
+}
+
+.makes__name {
+  max-width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 16px;
+}
+
+.makes__qty {
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: $grey;
+}
+
+.makes__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.makes__list--models {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.makes__item--model {
+  margin-right: 8px;
+}
+
+.makes__item--model a {}
+
+.makes__name--model {
+  margin-right: 16px;
+  max-width: 100%;
+}
+
+.makes__item.makes__item--active {
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:hover .makes__qty {
+    color: white;
+  }
+}
+
+.makes__item--active a {
+  background-color: $red;
+  color: white;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.makes__item--active .makes__qty {
+  color: white;
+}
+
+.makes__item--model .makes__name {
+  margin-right: 32px;
+}
+@media (max-width: $mobile-width-only) {
+  .makes__item {
+    width: 50%;
+  }
+
+  .makes__name {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 4px;
+  }
+
+  .makes__list--models {
+    padding: 0 0 0 16px;
+    margin: 0 -16px;
+  }
+
+  .makes__heading {
+    margin-bottom: 16px;
+  }
+
+  .makes__tags {
+    margin: 0 -16px 16px;
+  }
+
+  .makes__list .makes__item--hidden {
+    display: none;
+  }
+
+  .makes__list--full .makes__item--hidden {
+    display: inline-block;
+  }
+
+  .makes__list {
+    &:not(.makes__list--models) {
+      display: flex;
+    }
+  }
+
+  .makes__list--full {
+    max-height: 100%;
+  }
+
+  .makes__list--models {
+    @include horizontal-swipe;
+    margin: 0 -16px;
+  }
+
+  .makes__item--model {
+    width: auto;
+  }
+}
+@media (max-width: $tablet-width-only) {
+  .makes--index {
+    padding: 16px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .makes__toggle {
+    margin-top: 8px;
+  }
+
+  .makes__list--makes {
+    flex-direction: column;
+    max-height: 355px;
+  }
+
+  .makes__list--models {
+    height: auto;
+  }
+}
+@media (min-width: $desktop-width) {
+  .makes--index {
+    padding: 32px;
+  }
+
+  .makes__list {
+    &:not(.makes__list--models) {
+      display: block;
+      column-count: 8;
+    }
+  }
+
+  .makes__item {
+    &:not(.makes__item--model) {
+      display: inline-block;
+      width: 105%;
+    }
+    position: relative;
+    transition: all 0.3s;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    &:hover .makes__qty {
+      color: $red;
+    }
+  }
+
+  .makes__item a {
+    &:hover .makes__qty {}
+  }
+
+  .makes__list--models {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .makes__hidden {
+    display: flex;
+  }
+
+  .makes__toggle {
+    display: none!important;
+  }
+}

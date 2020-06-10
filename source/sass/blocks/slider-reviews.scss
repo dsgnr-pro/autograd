@@ -1,0 +1,29 @@
+.slider-reviews .slick-dots {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto;
+  width: 100%;
+}
+
+.slider-reviews .slick-dots li {
+  background-color: $black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.slider-reviews .slick-slide {
+  padding: 0 8px;
+}
+
+.slider-reviews .slick-dots li.slick-active {
+  background-color: $red;
+}
+
+.slider-reviews .slick-dots li button {
+  display: none;
+}
+

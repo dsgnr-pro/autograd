@@ -1,0 +1,53 @@
+.range .irs--flat .irs-handle {
+  border-radius: 50%;
+  background-color: $red;
+  width: 26px;
+  height: 26px;
+  border: 4px solid white;
+  top: 18px;
+}
+
+.range .irs--flat .irs-handle > i {
+  &:first-child {
+    display: none;
+  }
+}
+
+.range .irs--flat .irs-bar {
+  background-color: $red;
+}
+
+.range .irs-grid-pol.small {
+  height: 0;
+}
+
+.range .irs--flat .irs-bar {
+  top: 29px;
+  height: 4px;
+  background-color: $red;
+}
+
+.range .irs--flat .irs-single {
+  background-color: $red;
+}
+
+.range .irs--flat .irs-line {
+  top: 29px;
+  height: 4px;
+}
+
+@media (min-width: $desktop-width) {
+  .range .irs-grid-text {
+    font-size: 11px;
+  }
+
+  .range .irs--flat .irs-handle {
+    transition: transform 0.3s;
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.heading {
+  font-family: "Akrobat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.heading--line {
+  display: inline-block;
+  position: relative;
+}
+
+.heading--h1 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.heading--h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  display: inline-block;
+  align-items: center;
+}
+
+.heading.heading--no-margin {
+  margin-top: 0;
+}
+
+.heading--fieldset {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.heading__car {
+  margin-bottom: 8px;
+}
+@media (min-width: $tablet-width) {
+  .heading--h1 {
+    font-size: 32px;
+  }
+
+  .heading__car {
+    margin-bottom: 8px;
+  }
+
+  .heading--h2 {
+    font-size: 24px;
+  }
+}

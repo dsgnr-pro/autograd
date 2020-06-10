@@ -1,0 +1,18 @@
+.credit__steps {
+  margin-bottom: 16px;
+}
+
+.credit__form {
+  margin-bottom: 8px;
+}
+
+.credot__car .catalog__car-detail {
+  border-bottom: 1px solid $light-grey;
+}
+@media (max-width: $mobile-width-only) {}
+@media (min-width: $tablet-width) {
+  .credit__text {
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: $desktop-width) {}

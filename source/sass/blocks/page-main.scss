@@ -1,0 +1,87 @@
+.page-main {
+  position: relative;
+}
+
+.page-main__section {
+  margin-bottom: 32px;
+}
+
+.page-main__section--makes {
+  z-index: 25;
+  position: relative;
+  margin-top: -60px;
+}
+
+.page-main__makes-filter {
+  border-radius: 4px;
+  box-shadow: $shadow;
+  background-color: white;
+}
+
+.page-main__slider-dealer {
+  margin-bottom: 24px;
+}
+
+.page-main__main-pic {
+  display: flex;
+  justify-content: center;
+}
+
+.page-main__slider-index {
+  background-color: $black;
+}
+
+.page-main__header-content {}
+
+.page-main__section--white {
+  background-color: white;
+  padding-bottom: 120px;
+}
+
+.page-main__section--reviews {}
+@media (max-width: $mobile-width-only) {
+  .page-main {
+    overflow-x: hidden;
+  }
+
+  .page-main__main-pic {
+    margin: 24px 0;
+  }
+
+  .page-main__crumbs {
+    display: none!important;
+  }
+
+  .page-main__form-info {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-main__makes-filter {}
+}
+@media (min-width: $tablet-width) {
+  .page-main--index {
+    top: -30px;
+  }
+
+  .page-main__header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-main__section--makes {
+    margin-top: -120px;
+  }
+
+  .page-main--sticky {
+    padding-top: 120px;
+  }
+}
+@media (min-width: $wide-desktop-width) {
+  .page-main__section--makes {
+    margin-top: -240px;
+  }
+}

@@ -1,0 +1,156 @@
+.benefits__text {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.benefits__link {
+  @include a-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits__item-inner {
+  @include a-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  padding: 24px;
+}
+
+.benefits__item span {
+  display: block;
+}
+
+.benefits__name {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.benefits__icon {
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits--slider {
+  position: relative;
+}
+
+.benefits--slider .slick-arrow {
+  position: absolute;
+}
+
+.benefits__item--credit a {
+  min-height: auto;
+  font-weight: 500;
+}
+
+.benefits__item--services {
+  margin-bottom: 8px;
+}
+
+.benefits--inner {
+  margin: 16px 0;
+}
+@media (max-width: $mobile-width-only) {
+  .benefits {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      padding-right: 16px;
+    }
+  }
+
+  .benefits__list {
+    @include horizontal-swipe;
+    padding: 0 16px 16px;
+    margin: 16px -16px;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .benefits__item--services {
+    width: 50%;
+  }
+
+  .benefits__link {
+    display: flex;
+    padding: 8px 16px;
+    background-color: $grey;
+    margin-right: 8px;
+    border-radius: 24px;
+  }
+
+  .benefits__icon {
+    display: none;
+  }
+
+  .benefits__text {}
+}
+@media (min-width: $tablet-width) {
+  .benefits__list {
+    @include list-reset;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 26px 50px -27px rgba(0,0,0,.22);
+    border-radius: $border-radius;
+    background-color: white;
+    box-shadow: $shadow;
+    padding: 24px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .benefits--aside .benefits__item {
+    width: 48%;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .benefits--aside .benefits__list {
+    flex-wrap: wrap;
+  }
+
+  .benefits__link svg {
+    transition: all 0.3s;
+  }
+
+  .benefits__link {
+    transition: all 0.3s;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:hover svg {
+      fill: $red;
+    }
+  }
+
+  .benefits__text {
+    max-width: 120px;
+  }
+
+  .benefits--inner .benefits__item--services {
+    &:first-child a {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

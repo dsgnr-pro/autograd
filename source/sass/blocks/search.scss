@@ -1,0 +1,35 @@
+.search__button {
+  padding: 14px;
+  background-color: $red;
+}
+
+@media (max-width: $mobile-width-only) {
+  .search__form {
+    // height: 48px;
+  }
+
+  .search__form .form__select-wrapper {
+    display: none;
+  }
+
+  .search__form .form__select-wrapper--mobile {
+    display: block;
+  }
+
+  .search__button {
+    padding: 14px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .search__button {}
+}
+
+@media (min-width: $desktop-width) {
+  .search__button {
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}

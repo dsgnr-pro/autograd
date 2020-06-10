@@ -1,0 +1,14 @@
+.white-block {
+  border-radius: 8px;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 26px 50px -27px rgba(0,0,0,.22);
+}
+
+@media (min-width: $tablet-width) {
+  .white-block--text {
+    font-size: 17.5px;
+    line-height: 1.5;
+    box-sizing: border-box;
+  }
+}

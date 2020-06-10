@@ -1,0 +1,71 @@
+.slider-tech .slick-dots {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 0;
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+}
+
+.slider-tech .slick-dots li {
+  background-color: $black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.slider-tech {
+  margin-top: 0;
+
+  &:hover .slick-arrow {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+}
+
+.slider-tech .slick-dots li.slick-active {
+  background-color: $red;
+}
+
+.slider-tech .slick-dots li button {
+  display: none;
+}
+
+.slider-tech .slick-arrow {
+  position: absolute;
+  top: calc(50% - 19px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $red;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center;
+  z-index: 100;
+  border: none;
+  opacity: 0.2;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+
+.slider-tech .slick-next {
+  right: 15px;
+}
+
+.slider-tech .slick-prev {
+  left: 15px;
+  transform: rotate(180deg);
+}
+
+.slider-tech__item img {
+  width: 100%;
+  border-radius: 6px;
+}

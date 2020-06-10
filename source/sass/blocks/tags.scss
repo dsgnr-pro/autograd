@@ -1,0 +1,29 @@
+.tags__list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+}
+
+.tags__link {
+  @include a-reset;
+  display: inline-block;
+  background-color: $light-grey;
+  padding: 8px;
+  border-radius: 24px;
+  color: $dark-grey;
+  font-family: "Akrobat";
+}
+
+.tags__item {
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media (max-width: $mobile-width-only) {
+  .tags__list--swipe {
+    @include horizontal-swipe;
+  }
+}
+@media (min-width: $tablet-width) {
+  .tags__link {}
+}

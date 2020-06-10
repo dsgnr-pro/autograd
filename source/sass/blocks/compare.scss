@@ -1,0 +1,96 @@
+.compare__wrap {
+  @include white-block;
+  width: 100%;
+}
+
+.compare__table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.compare__table tr {
+  border-bottom: 1px solid $light-grey;
+}
+
+.compare__table td,
+.compare__table th {
+  width: 200px;
+}
+
+.compare__remove {
+  @include button-reset;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 50;
+  display: block;
+  background-image: url("../img/icon-remove.svg");
+  background-size: 18px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  opacity: 0.5;
+}
+
+.compare__labels {
+  position: absolute;
+  top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+}
+
+.compare__img-wrap {
+  position: relative;
+}
+
+.compare__table td {
+  padding: 16px;
+  text-align: center;
+}
+
+.compare__img {
+  width: 240px;
+}
+@media (max-width: $mobile-width-only) {
+  .compare__table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .compare__img picture {
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .compare__remove {
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  .compare__table tr {
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+
+  .compare__table thead tr {
+    &:hover {
+      background-color: white;
+    }
+  }
+}
