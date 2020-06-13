@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.catalog__credit-popup-photos {
+  display: none;
+}
+
 .catalog__car-info-icon {
   display: none;
 }
@@ -1690,5 +1694,36 @@
 
   .catalog__card-labels {
     top: 0;
+    padding-left: 48px;
+    right: 16px;
+  }
+  
+  .catalog__sort-select-wrap {
+    
+  }
+  
+  .catalog__sort-select-wrap ~ .select2-container--default .select2-selection--single {
+    border: 1px solid transparent;
+    background-color: $light-grey;
+    border-radius: 6px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: $grey;
+      transition: 0.3s;
+    }
+  }
+
+  .catalog__sort-select-wrap .select2 b {
+    display: none;
+  }
+  
+  .catalog__sort-select-wrap .select2-selection {
+    &:hover {
+      border: none;
+    }
   }
 }

@@ -35,7 +35,7 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-            <img class=" lazyloaded" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте" src="img/catalog/catalog-car-1@1x.jpg">
+            <img class=" lazyloaded" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="" src="img/catalog/catalog-car-1@1x.jpg">
           </picture>
         </div>
         <div class="catalog__car-mini-info">
@@ -69,30 +69,30 @@
         </div>
       </div>
     </div>
-    <form class="form form--express" action="">
+    <form class="form form--express">
       <h2 class="heading heading--fieldset">Экспресс-автокредит</h2>
       <label class="form__wrap" for="name">
-        <input id="name" class="form__field form__field--input" name="name" placeholder="ФИО" required="">
+        <input class="form__field form__field--input" name="name" placeholder="ФИО" required="">
       </label>
       <label class="form__wrap" for="date">
-        <input id="date" class="form__field form__field--input" name="make" placeholder="Дата рождения" required="">
+        <input class="form__field form__field--input" name="make" placeholder="Дата рождения" required="">
       </label>
       <label class="form__wrap" for="phone">
-        <input id="phone" type="tel" class="form__field form__field--input" name="tel" placeholder="Телефон" required="">
+        <input type="tel" class="form__field form__field--input" name="tel" placeholder="Телефон" required="">
       </label>
       <div class="form__select-wrap">
-        <select name="gear" id="" class="form__field select">
+        <select name="city" class="form__field select">
           <option value="">Прописка</option>
           <option value="">2</option>
         </select>
       </div>
       <div class="form__submit-wrap">
-        <label for="agree-passport" class="form__agree form__label">
-          <input class="visually-hidden form__checkbox" id="agree-passport" type="checkbox" name="agree-passport">
+        <label for="express-agree-passport" class="form__agree form__label">
+          <input class="visually-hidden form__checkbox" id="express-agree-passport" type="checkbox" name="express-agree-passport">
           <span class="form__agree-text">Являюсь гражданином РФ (кроме Северного Кавказа)</span>
         </label>
-        <label for="agree-personal" class="form__agree form__label">
-          <input class="visually-hidden form__checkbox" id="agree-personal" type="checkbox" name="agree-personal">
+        <label for="express-agree-personal" class="form__agree form__label">
+          <input class="visually-hidden form__checkbox" id="express-agree-personal" type="checkbox" name="express-agree-personal">
           <span class="form__agree-text">Соглашаюсь на обработку моих персональных данных</span>
         </label>
         <button type="submit" class="button button--red form__submit">Отправить заявку</button>
@@ -140,20 +140,20 @@
         <div class="page-header__main">
           <div class="page-header__wrap">
             <div class="page-header__logo">
-              <img class="page-header__logo-img page-header__logo-img--dark" src="img/logo-black.svg" alt="" width="64" height="auto">
-              <img class="page-header__logo-img page-header__logo-img--sticky" src="img/logo.svg" alt="" width="64" height="auto">
+              <img class="page-header__logo-img page-header__logo-img--dark" src="img/logo-black.svg" alt="" width="64">
+              <img class="page-header__logo-img page-header__logo-img--sticky" src="img/logo.svg" alt="" width="64">
             </div>
             <div class="page-header__contacts">
               <div class="page-header__contacts-item page-header__contacts-item--address">
                 г. Москва, Варшавское шоссе, 170Г
               </div>
-              <a class="page-header__contacts-item page-header__contacts-item--phone" href="tel:+7 (800) 511-84-30">
+              <a class="page-header__contacts-item page-header__contacts-item--phone" href="tel:+78005118430">
                 <svg class="page-header__contacts-icon" viewBox="0 0 48 48">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
                 +7 (800) 511-84-30
               </a>
-              <a class="page-header__contacts-item page-header__contacts-item--phone page-header__contacts-item--phone-main" href="tel:+7 (800) 511-84-30">
+              <a class="page-header__contacts-item page-header__contacts-item--phone page-header__contacts-item--phone-main" href="tel:+78005118430">
                 <svg class="page-header__contacts-icon" viewBox="0 0 48 48">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -419,82 +419,83 @@
             </button>
           </section>
           <section class="filter filter--index">
-            <form class="filter__form form form--filter row" action="">
-              <div class="col-lg-2">
+            <form class="filter__form form form--filter row">
+              <div class="filter__form-item col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field select--search form__field--select select">
+                  <select name="make" class="form__field select--search form__field--select select">
                     <option value="">Марка</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="model" class="form__field form__field--select select select--search">
                     <option value="">Модель</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="gear" class="form__field form__field--select select">
                     <option value="">КПП</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="housing" class="form__field form__field--select select">
                     <option value="">Тип кузова</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
-                <input name="" class="form__field form__field--input" placeholder="Цена от">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
+                <input name="price-from" class="form__field form__field--input" placeholder="Цена от">
               </div>
-              <div class="col-lg-2">
-                <input name="" class="form__field form__field--input" placeholder="Цена до">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
+                <input name="price-to" class="form__field form__field--input" placeholder="Цена до">
               </div>
-              <div class="col-lg-2">
-                <input name="" class="form__field form__field--input" placeholder="Мощность до">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
+                <input name="power-to" class="form__field form__field--input" placeholder="Мощность до">
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="owners" class="form__field form__field--select select">
                     <option value="">Владельцев</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="drive" class="form__field form__field--select select">
                     <option value="">Привод</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="year-from" class="form__field form__field--select select">
                     <option value="">Год от</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="filter__form-item filter__form-item--hidden col-lg-2">
                 <div class="form__select-wrap">
-                  <select name="" class="form__field form__field--select select">
+                  <select name="fuel" class="form__field form__field--select select">
                     <option value="">Тип топлива</option>
                     <option value="">2</option>
                   </select>
                 </div>
               </div>
               <div class="form__btn-wrapper form__btn-wrapper--row col-lg-2">
-                <button class="button button--search">Подобрать</button>
+                <button class="button button--red filter__button">Подобрать</button>
+                <button class="button button--plain filter__toggle"></button>
               </div>
             </form>
           </section>
@@ -524,10 +525,10 @@
         <section class="catalog__sort">
           <form action="" class="catalog__sort-form">
             <div class="catalog__sort-select-wrap">
-              <select class="catalog__sort-select" name="" id="">
+              <select class="catalog__sort-select select" name="" id="">
                 <option value="">Сортировать</option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="">Цена: сначала высокая</option>
+                <option value="">Цена: сначала низкая</option>
               </select>
             </div>
           </form>
@@ -546,34 +547,8 @@
         </section>
         <section class="page-main__section page-main__section--latest">
           <ul class="catalog page-main__catalog page-main__catalog--latest row">
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
               <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
-
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
-                    </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
-                </div>
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -589,7 +564,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -598,7 +573,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -607,7 +582,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -616,7 +591,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -679,35 +654,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -723,7 +698,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -732,7 +707,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -741,7 +716,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -750,7 +725,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -813,35 +788,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -857,7 +832,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -866,7 +841,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -875,7 +850,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -884,7 +859,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -947,35 +922,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -991,7 +966,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -1000,7 +975,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -1009,7 +984,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -1018,7 +993,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -1081,35 +1056,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -1125,7 +1100,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -1134,7 +1109,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -1143,7 +1118,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -1152,7 +1127,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -1215,35 +1190,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -1259,7 +1234,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -1268,7 +1243,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -1277,7 +1252,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -1286,7 +1261,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -1349,35 +1324,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -1393,7 +1368,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -1402,7 +1377,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -1411,7 +1386,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -1420,7 +1395,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -1483,35 +1458,35 @@
                   </div>
                 </div>
               </a>
-            </li>
-            <li class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
-              <a class="catalog__car-link" href="">
-                <div class="catalog__card-labels">
-                  <div class="catalog__card-labels-wrap">
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
 
-                    <div class="label label--recommend">
-                      <svg viewBox="0 0 48 48">
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                      <div class="label__inner">
-                        Автомобиль рекомендован по соотношению цены и технического состояния.
-                      </div>
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
                     </div>
-
-                    <div class="label label--vin">
-                      VIN
-                      <div class="label__inner">
-                        VIN-номер прошел полную проверку.
-                      </div>
-                    </div>
-
                   </div>
 
-                  <label class="like">
-                    <input class="like__checkbox" type="checkbox">
-                    <div class="like__checked"></div>
-                  </label>
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
                 </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
+            <article class="catalog__car-item catalog__car-item--long col-12 col-md-6 col-lg-12">
+              <a class="catalog__car-link" href="">
                 <div class="catalog__car-descr">
                   <h3 class="catalog__car-heading">Hyundai Solaris 3.5, 2018</h3>
                   <div class="catalog__price-wrap catalog__price-wrap--mini-pc">
@@ -1527,7 +1502,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -1536,7 +1511,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -1545,7 +1520,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -1554,7 +1529,7 @@
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                    <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                   </picture>
                 </div>
                 <ul class="catalog__car-info">
@@ -1617,7 +1592,33 @@
                   </div>
                 </div>
               </a>
-            </li>
+              <div class="catalog__card-labels">
+                <div class="catalog__card-labels-wrap">
+
+                  <div class="label label--recommend">
+                    <svg viewBox="0 0 48 48">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <div class="label__inner">
+                      Автомобиль рекомендован по соотношению цены и технического состояния.
+                    </div>
+                  </div>
+
+                  <div class="label label--vin">
+                    VIN
+                    <div class="label__inner">
+                      VIN-номер прошел полную проверку.
+                    </div>
+                  </div>
+
+                </div>
+
+                <label class="like">
+                  <input class="like__checkbox" type="checkbox">
+                  <span class="like__checked"></span>
+                </label>
+              </div>
+            </article>
           </ul>
           <a href="" class="button button--plain">Все автомобили</a>
         </section>
@@ -1747,26 +1748,15 @@
 
     </footer>
 
-    <script src="http://api-maps.yandex.ru/2.1.69/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/lazysizes.min.js" async=""></script>
-    <script src="js/brazzers-carousel.min.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/rangeslider.min.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/purecounter.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/toggle-view.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1.69/?lang=ru_RU"></script>
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5"></script>
+
+    <script src="js/dist/bundle.js"></script>
+    
     <script>
       AOS.init();
     </script>
-    <script src="js/ymaps.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/plyr.min.js"></script>
 
     <script>
       const player = new Plyr('#player');

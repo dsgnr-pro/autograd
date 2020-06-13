@@ -21,7 +21,8 @@
   width: 18px;
   height: 18px;
   position: relative;
-
+  display: block;
+  
   &::after,
   &::before {
     content: "";

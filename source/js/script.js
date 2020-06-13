@@ -1,13 +1,29 @@
-
-
 (function () {
   tippy('[data-tippy-content]');
 })();
 
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true,
+  'showImageNumberLabel': false,
+});
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+  $('.select').select2({
+    minimumResultsForSearch: -1
+  });
+  $('.select--search').select2({
+    minimumResultsForSearch: 1
+  });
+  $('.select--datalist').select2({
+    tags: true
+  });
+}
+
 $('.popup--link').magnificPopup({
   removalDelay: 500, //delay removal by X to allow out-animation
   callbacks: {
-    beforeOpen: function() {
+    beforeOpen: function () {
       this.st.mainClass = this.st.el.attr('data-effect');
     }
   },

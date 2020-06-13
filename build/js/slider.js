@@ -12,7 +12,6 @@ $('.popular__list').slick({
   arrows: true,
   dots: false,
   slidesToShow: 3,
-  autoplay: false,
   rows: false,
   responsive: [{
       breakpoint: 1199,
@@ -63,6 +62,7 @@ $('.reviews__list--slider').slick({
 $('.slider-index').slick({
   dots: false,
   rows: false,
+  arrows: false,
   responsive: [{
     breakpoint: 767,
     settings: {
@@ -124,7 +124,7 @@ $(".slider-car a").click(function (evt) {
   evt.preventDefault();
 });
 
-$('.slider-car--pc').slick({
+$('.slider-car').slick({
   arrows: true,
   dots: false,
   slidesToShow: 1,
@@ -132,34 +132,17 @@ $('.slider-car--pc').slick({
   rows: false,
 });
 
-$('.slider-car--mobile').slick({
-  arrows: true,
-  dots: false,
-  slidesToShow: 1,
-  asNavFor: '.slider-nav-car'
-});
-
 $('.slider-nav-car').slick({
   arrows: false,
   dots: false,
   slidesToShow: 5,
   rows: false,
-  asNavFor: '.slider-car--pc',
+  asNavFor: '.slider-car',
   centerMode: false,
   focusOnSelect: true,
   slidesToScroll: 1,
   focusOnSelect: true
 });
-
-if (window.matchMedia("(max-width: 767px)").matches) {
-  $('.slider-car--vertical').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    rows: 0,
-    arrows: true,
-  });
-};
 
 
 $('.slider-banks').slick({

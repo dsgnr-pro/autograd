@@ -72,20 +72,20 @@
         <div class="page-header__main">
           <div class="page-header__wrap">
             <div class="page-header__logo">
-              <img class="page-header__logo-img page-header__logo-img--dark" src="img/logo-black.svg" alt="" width="64" height="auto">
-              <img class="page-header__logo-img page-header__logo-img--sticky" src="img/logo.svg" alt="" width="64" height="auto">
+              <img class="page-header__logo-img page-header__logo-img--dark" src="img/logo-black.svg" alt="" width="64">
+              <img class="page-header__logo-img page-header__logo-img--sticky" src="img/logo.svg" alt="" width="64">
             </div>
             <div class="page-header__contacts">
               <div class="page-header__contacts-item page-header__contacts-item--address">
                 г. Москва, Варшавское шоссе, 170Г
               </div>
-              <a class="page-header__contacts-item page-header__contacts-item--phone" href="tel:+7 (800) 511-84-30">
+              <a class="page-header__contacts-item page-header__contacts-item--phone" href="tel:+78005118430">
                 <svg class="page-header__contacts-icon" viewBox="0 0 48 48">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
                 +7 (800) 511-84-30
               </a>
-              <a class="page-header__contacts-item page-header__contacts-item--phone page-header__contacts-item--phone-main" href="tel:+7 (800) 511-84-30">
+              <a class="page-header__contacts-item page-header__contacts-item--phone page-header__contacts-item--phone-main" href="tel:+78005118430">
                 <svg class="page-header__contacts-icon" viewBox="0 0 48 48">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -151,14 +151,14 @@
               <button class="step-form__item"></button>
             </div>
 
-            <form id="form-step" class="form form--step" action="">
+            <form id="form-step" class="form form--step">
               <fieldset class="form__step form__step--active">
                 <h2 class="heading heading--fieldset">Выберите автомобиль</h2>
                 <div class="form__wrap">
-                  <div class="form__paired">
+                  <div class="form__paired form__paired--selects">
                     <div class="form__select-wrap">
-                      <select name="make" id="" class="form__field form__field--check select" required="">
-                        <option>Марка</option>
+                      <select name="make" class="form__field form__field--check select select--search" required="">
+                        <option value="">Марка</option>
                         <optgroup label="Популярные марки">
                           <option value="KIA">KIA</option>
                           <option value="Hyundai">Hyundai</option>
@@ -174,8 +174,8 @@
                       </select>
                     </div>
                     <div class="form__select-wrap">
-                      <select name="model" id="" class="form__field form__field--check select" required="">
-                        <option>Модель</option>
+                      <select name="model" class="form__field form__field--check select select--search" required="">
+                        <option value="">Модель</option>
                         <option value="">2</option>
                       </select>
                     </div>
@@ -194,7 +194,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -236,7 +236,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -278,7 +278,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -320,7 +320,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -362,7 +362,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -404,7 +404,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -446,7 +446,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -488,7 +488,7 @@
                             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                             <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                            <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                           </picture>
                         </div>
                         <div class="catalog__car-mini-info">
@@ -531,14 +531,14 @@
                   <label class="form__label form__label--range" for="rangePeriod">
                     <div class="form__label-name">Срок кредитования:</div>
                   </label>
-                  <input type="text" class="js-range-slider js-range-slider--period" name="rangePeriod" value="">
+                  <input id="rangePeriod" type="text" class="js-range-slider js-range-slider--period" name="rangePeriod" value="">
                 </div>
                 <div class="form__wrap form__wrap--range range">
-                  <label class="form__label form__label--range" for="percentage">
+                  <label class="form__label form__label--range" for="rangePayment">
                     <div class="form__label-name">Первоначальный взнос:</div>
                     <!-- <div class="form__label-number">16 000 ₽</div> -->
                   </label>
-                  <input type="text" class="js-range-slider js-range-slider--payment" name="rangePayment" value="">
+                  <input id="rangePayment" type="text" class="js-range-slider js-range-slider--payment" name="rangePayment" value="">
                 </div>
                 <div class="form__total">
                   <div class="form__total-wrap">
@@ -624,7 +624,7 @@
                         <div class="catalog__car-oldprice">1 585 000 ₽</div>
                       </div>
                     </div>
-                    <div class="catalog__car-img catalog__car-img--credit">
+                    <a href="img/catalog/catalog-car-1@2x.jpg" data-lightbox="credit-car" class="catalog__car-img catalog__car-img--credit">
                       <picture>
                         <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                         <source media="(min-width: 1200px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
@@ -632,7 +632,7 @@
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.webp 1x, img/catalog/catalog-car-1@2x.webp 2x">
                         <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-1@1x.jpg 1x, img/catalog/catalog-car-1@2x.jpg 2x">
 
-                        <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                        <img class="lazyload" data-src="img/catalog/catalog-car-1@1x.jpg" srcset="img/catalog/catalog-car-1@2x.jpg 2x" alt="">
                       </picture>
                       <picture>
                         <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
@@ -641,7 +641,7 @@
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.webp 1x, img/catalog/catalog-car-2@2x.webp 2x">
                         <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-2@1x.jpg 1x, img/catalog/catalog-car-2@2x.jpg 2x">
 
-                        <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                        <img class="lazyload" data-src="img/catalog/catalog-car-2@1x.jpg" srcset="img/catalog/catalog-car-2@2x.jpg 2x" alt="">
                       </picture>
                       <picture>
                         <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
@@ -650,7 +650,7 @@
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.webp 1x, img/catalog/catalog-car-3@2x.webp 2x">
                         <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-3@1x.jpg 1x, img/catalog/catalog-car-3@2x.jpg 2x">
 
-                        <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                        <img class="lazyload" data-src="img/catalog/catalog-car-3@1x.jpg" srcset="img/catalog/catalog-car-3@2x.jpg 2x" alt="">
                       </picture>
                       <picture>
                         <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
@@ -659,8 +659,13 @@
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.webp 1x, img/catalog/catalog-car-4@2x.webp 2x">
                         <source media="(min-width: 768px)" srcset="img/catalog/catalog-car-4@1x.jpg 1x, img/catalog/catalog-car-4@2x.jpg 2x">
 
-                        <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="Расположение CatEnergy на карте">
+                        <img class="lazyload" data-src="img/catalog/catalog-car-4@1x.jpg" srcset="img/catalog/catalog-car-4@2x.jpg 2x" alt="">
                       </picture>
+                    </a>
+                    <div class="catalog__credit-popup-photos">
+                      <a href="img/catalog/catalog-car-2@2x.jpg" data-lightbox="credit-car"></a>
+                      <a href="img/catalog/catalog-car-3@2x.jpg" data-lightbox="credit-car"></a>
+                      <a href="img/catalog/catalog-car-4@2x.jpg" data-lightbox="credit-car"></a>
                     </div>
                     <ul class="catalog__car-info">
                       <li class="catalog__car-info-item">
@@ -745,23 +750,23 @@
         <section class="page-main__banks banks">
           <h2 class="heading heading--h2">Банки-партнеры</h2>
           <div class="slider-banks">
-            <div class="slider-banks__item"><img src="img/slider-banks/sberbank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/alfa-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/gazprombank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/reiffeisen-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/rusfinans-bank.png"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/setelem-bank.png"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/tinkoff-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/unicredit-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/sovkombank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/rosbank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/rosselhozbank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/pochta-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/open-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/loko-bank.png"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/home-credit-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/avangard-bank.svg"></div>
-            <div class="slider-banks__item"><img src="img/slider-banks/center-invest-bank.svg"></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/sberbank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/alfa-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/gazprombank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/reiffeisen-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/rusfinans-bank.png" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/setelem-bank.png" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/tinkoff-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/unicredit-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/sovkombank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/rosbank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/rosselhozbank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/pochta-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/open-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/loko-bank.png" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/home-credit-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/avangard-bank.svg" alt=""></div>
+            <div class="slider-banks__item"><img src="img/slider-banks/center-invest-bank.svg" alt=""></div>
           </div>
         </section>
 
@@ -774,7 +779,7 @@
         <div class="page-footer__top">
           <div class="page-footer__contacts">
             <!-- <div class="page-footer__logo">
-                <img class="page-footer__logo-img lazyload" src="img/logo-black.svg" alt="" width="64" height="auto">
+                <img class="page-footer__logo-img lazyload" src="img/logo-black.svg" alt="" width="64">
               </div> -->
             <div class="page-footer__contacts-wrap">
               <div class="page-footer__phone-wrap">
@@ -892,33 +897,15 @@
 
     </footer>
 
-    <script src="js/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="js/form.js"></script>
-
-    <script src="http://api-maps.yandex.ru/2.1.69/?lang=ru_RU" type="text/javascript" crossorigin="anonymous"></script>
-
-    <script src="js/lazysizes.min.js" async=""></script>
-    <script src="js/brazzers-carousel.min.js"></script>
-    <script src="js/slick.min.js"></script>
-
-    <script src="js/slider.js"></script>
-    <script src="js/rangeslider.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/purecounter.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/toggle-view.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-
+    <script src="http://api-maps.yandex.ru/2.1.69/?lang=ru_RU"></script>
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5"></script>
 
+    <script src="js/dist/bundle.js"></script>
+    
     <script>
       AOS.init();
     </script>
-    <script src="js/ymaps.js"></script>
-    <script src="js/range.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/plyr.min.js"></script>
 
     <script>
       const player = new Plyr('#player');

@@ -1,4 +1,12 @@
 @media print {
+  .page-header__logo-img--sticky {
+    display: none;
+  }
+  
+  .page-header__logo-img--dark {
+    display: block;
+  }
+  
   .page-banner {
     display: none;
   }

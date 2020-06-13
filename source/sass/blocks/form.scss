@@ -17,6 +17,12 @@
   justify-content: space-between;
 }
 
+.form__field--datalist {
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
 .form__wrap-phone .form__wrap {
   flex-grow: 1;
 }
@@ -121,13 +127,22 @@
 }
 
 .form__field ~ .select2-container--default .select2-selection--single {
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   background-color: $light-grey;
   border-radius: 6px;
 
-  &:hover {
-    border: 2px solid $red;
+  &:focus {
+    outline: none;
   }
+
+  &:hover {
+    border-color: $grey;
+    transition: 0.3s;
+  }
+}
+
+.form__select-wrap .select2 b {
+  display: none;
 }
 
 .form__field ~ .select2-selection__rendered {
@@ -601,6 +616,10 @@
   }
 }
 @media (min-width: $desktop-width) {
+  .form__paired--selects {
+    margin-bottom: 8px;
+  }
+
   .form__select-wrap {
     &:hover {
       cursor: pointer;
